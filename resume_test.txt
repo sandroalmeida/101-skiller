@@ -1,0 +1,93 @@
+ExperienceExperience
+
+SiriusXM logo
+Senior Software EngineerSenior Software Engineer
+SiriusXM · Permanent Full-timeSiriusXM · Permanent Full-time
+Dec 2021 - Present · 1 yr 5 mosDec 2021 - Present · 1 yr 5 mos
+Vancouver, British Columbia, CanadaVancouver, British Columbia, Canada
+Backend development using Scala 2 and Java 8/11 in a multi micro services architecture. Responsible for: documentation,
+general architecture guidelines, new features implementations, create/update Rest APIs, database maintenance, fixing bugs,
+general improvements.
+Ownership of a new project which is providing a new portal for the internal users interact with all the microservices
+configurations. Acting as a Full Stack developing with React and Java in this case. This project is a gateway across all the
+microservices making possible for members of devops, product and QA teams interact with all the microservices
+configurations without accessing them direct.
+Ownership of another existent Scala microservice responsible for: improvements, updates, fixing bugs and performance
+monitoring.
+General participation on Daily stand up and triage meetings addressing implementations and bugs fixing across the whole
+system environment.
+Working actively on documentations as wiki, confluence, readme files for repositories, architect solutions, design proposals.
+Contributing on the weekly tech talks with presentations for share/transfer knowledge with other members of the team.
+Providing guidance for other members of the team by pair programming and technical discussions.
+Main Technologies: Scala, Java, Spring Framework, MicroServices, React, AWS, Cassandra, Jenkins.Backend development using Scala 2 and Java 8/11 in a multi micro services architecture. Responsible for: documentation, general architecture guidelines, new features implementations, create/update Rest APIs, database maintenance, fixing bugs, general improvements. Ownership of a new project which is providing a new portal for the internal users interact with all the microservices configurations. Acting as a Full Stack developing with React and Java in this case. This project is a gateway across all the microservices making possible for members of devops, product and QA teams interact with all the microservices configurations without accessing them direct. Ownership of another existent Scala microservice responsible for: improvements, updates, fixing bugs and performance monitoring. General participation on Daily stand up and triage meetings addressing implementations and bugs fixing across the whole system environment. Working actively on documentations as wiki, confluence, readme files for repositories, architect solutions, design proposals. Contributing on the weekly tech talks with presentations for share/transfer knowledge with other members of the team. Providing guidance for other members of the team by pair programming and technical discussions. Main Technologies: Scala, Java, Spring Framework, MicroServices, React, AWS, Cassandra, Jenkins.…see more
+Skills: Scala · Java · Spring Framework · Amazon Web Services (AWS) · Microservices · React.js · Cassandra · JenkinsSkills: Scala · Java · Spring Framework · Amazon Web Services (AWS) · Microservices · React.js · Cassandra · Jenkins
+SEDNA logo c#
+Senior Full Stack EngineerSenior Full Stack Engineer
+SEDNA · Permanent Full-timeSEDNA · Permanent Full-time
+Mar 2021 - Sep 2021 · 7 mosMar 2021 - Sep 2021 · 7 mos CSharp
+Vancouver, British Columbia, CanadaVancouver, British Columbia, Canada
+Senior Full Stack Developer working on Back End development, Technical Documentation, Continuous Integration, Cloud
+Deployment, Database Modelling and Front End implementations.
+Creating new Technical Documentations, based on Product future vision, to define architecture and development
+implementations.
+Senior Developer of one of the three teams, responsible for large and complex implementations designated for that team.
+Creating and Implementing APIs for the two repositories in Kotlin and NodeJS.
+Creating new components / big implementations on the Front End using React / Redux.
+Continuous Integration Maintenance using Jenkins, GitHub, JUnit, Jest and AWS.
+Deploying and Monitoring AWS clusters on 15 regions across more than 5 countries.
+Making coding review daily to ensure the code quality and good practices.
+Familiar with the Agile methodologies, project management, Jira, Confluence and other administrative tools.
+Main Technologies: Kotlin, NodeJS, React / Redux, AWS, MySQL, Memcached, Jenkins, Elasticsearch, DockerSenior Full Stack Developer working on Back End development, Technical Documentation, Continuous Integration, Cloud Deployment, Database Modelling and Front End implementations. Creating new Technical Documentations, based on Product future vision, to define architecture and development implementations. Senior Developer of one of the three teams, responsible for large and complex implementations designated for that team. Creating and Implementing APIs for the two repositories in Kotlin and NodeJS. Creating new components / big implementations on the Front End using React / Redux. Continuous Integration Maintenance using Jenkins, GitHub, JUnit, Jest and AWS. Deploying and Monitoring AWS clusters on 15 regions across more than 5 countries. Making coding review daily to ensure the code quality and good practices. Familiar with the Agile methodologies, project management, Jira, Confluence and other administrative tools. Main Technologies: Kotlin, NodeJS, React / Redux, AWS, MySQL, Memcached, Jenkins, Elasticsearch, Docker…see more
+Skills: Kotlin · Node.js · MySQL · Memcached · Elasticsearch · Amazon Web Services (AWS) · React.js · JenkinsSkills: Kotlin · Node.js · MySQL · Memcached · Elasticsearch · Amazon Web Services (AWS) · React.js · Jenkins
+TRG Mobilearth Inc. logo
+Senior Java EngineerSenior Java Engineer
+TRG Mobilearth Inc. · Permanent Full-timeTRG Mobilearth Inc. · Permanent Full-time
+Mar 2019 - Feb 2021 · 2 yrsMar 2019 - Feb 2021 · 2 yrs
+Vancouver, British Columbia, CanadaVancouver, British Columbia, Canada
+Working as Senior Full Stack Developer in the Home Banking Portal. This project was being developed to replace a legacy
+portal, collaboration since the project was 30% in progress until the conclusion and delivery. This project was successfully
+put in production on 15 Banks on the Caribbean region affecting 3 millions users.
+Principal Engineer on key modules as: Applications (Loans), Transactions (Schedule Payments, Wire Transfer, EFT
+Transfer), e-Statements.
+Back End development using Java and Spring Framework. Highlight for the projects: Rest API Project (Back End for the
+Home Portal and Mobile Bank applications) and Core Banking Integrator (Connection between the Rest API Project and the
+Core Banking Solutions).
+Using Jira, Jenkins, Git, Docker, AWS daily as part of the Continuous Integration processes, deployment, environment
+management and tasks organization.
+General architecture improvements and documentation, proposing best practices adoption, design patterns and incremental
+improvements.
+Advanced experience with relational databases / SQL language applied to management / modelling the projects databases.
+Good experience with non-relational databases used to store non-structure data. Ex: Auxiliary information related with loans
+applications.
+Working to develop new procedures on the Core System responsible to connect all the systems with the customers Banking
+Cores.
+Strong business knowledge applied to create technical documentations to support new developments and suggest new
+functionalities.
+Excellent experience on SQL applied to manage the products databases.
+Writing unit tests and helping to manage the continuous integration tools.
+Counselling technical designer decisions and helping to build modern architecture solutions.
+Writing unit tests and helping to manage the continuous integration tools.
+Main Technologies: Java, Spring, MySQL, MongoDB, JUnit, Javascript, Angular, React / Redux, Jenkins, AWS, DockerWorking as Senior Full Stack Developer in the Home Banking Portal. This project was being developed to replace a legacy portal, collaboration since the project was 30% in progress until the conclusion and delivery. This project was successfully put in production on 15 Banks on the Caribbean region affecting 3 millions users. Principal Engineer on key modules as: Applications (Loans), Transactions (Schedule Payments, Wire Transfer, EFT Transfer), e-Statements. Back End development using Java and Spring Framework. Highlight for the projects: Rest API Project (Back End for the Home Portal and Mobile Bank applications) and Core Banking Integrator (Connection between the Rest API Project and the Core Banking Solutions). Using Jira, Jenkins, Git, Docker, AWS daily as part of the Continuous Integration processes, deployment, environment management and tasks organization. General architecture improvements and documentation, proposing best practices adoption, design patterns and incremental improvements. Advanced experience with relational databases / SQL language applied to management / modelling the projects databases. Good experience with non-relational databases used to store non-structure data. Ex: Auxiliary information related with loans applications. Working to develop new procedures on the Core System responsible to connect all the systems with the customers Banking Cores. Strong business knowledge applied to create technical documentations to support new developments and suggest new functionalities. Excellent experience on SQL applied to manage the products databases. Writing unit tests and helping to manage the continuous integration tools. Counselling technical designer decisions and helping to build modern architecture solutions. Writing unit tests and helping to manage the continuous integration tools. Main Technologies: Java, Spring, MySQL, MongoDB, JUnit, Javascript, Angular, React / Redux, Jenkins, AWS, Docker…see more
+Skills: AngularJS · MySQL · Java · Spring Framework · React.js · JenkinsSkills: AngularJS · MySQL · Java · Spring Framework · React.js · Jenkins
+Senior Java EngineerSenior Java Engineer
+Dotbuild IT Solution · Permanent Full-timeDotbuild IT Solution · Permanent Full-time
+Jan 2010 - Dec 2018 · 9 yrsJan 2010 - Dec 2018 · 9 yrs
+São Paulo, BrazilSão Paulo, Brazil
+Success case developing an ERP Solution from scratch and releasing it to market, actively participating in the whole project
+life cycle, including successfully prototyping, developing, testing, deploying and maintaining the application.
+Principal Developer responsible to code the core business classes in the system, understanding deeply the customers
+requirements and ensure the full adherence to clients companies.
+Architect responsible to implement the second version of the Rest API changing the Monolithic first approach to Micro
+Services architecture, project completed and delivered using Java and Spring Framework.
+Strong experience developing as a Java Full Stack acting in the Front End, Back End and Database programming and
+modelling.
+Worked closely with multi-talented teams, involving the collaboration and understanding of different areas of expertise, such
+as accounting, tax rules, finance, logistic and sales.
+Great experience conducting code reviews, building test scripts and controlling releases.
+Ability working with UML documentation, modelling databases and data structures, designing GUI and developing tests.
+Advanced knowledge applying relevant concepts such as Design Patterns, REST APIs, Multi-thread programming, Network
+Protocols HTTP/TCP, Dependency Injection and Continuous Integration.
+Technical Lead, being responsible for planning, directing, controlling and assessing software development processes and
+integration.
+Technologies used: Java, Spring, MySQL, SQL Server, Thymeleaf, JavaScript, HTML, CSS, Bootstrap, Jquery,AWS, React.Success case developing an ERP Solution from scratch and releasing it to market, actively participating in the whole project life cycle, including successfully prototyping, developing, testing, deploying and maintaining the application. Principal Developer responsible to code the core business classes in the system, understanding deeply the customers requirements and ensure the full adherence to clients companies. Architect responsible to implement the second version of the Rest API changing the Monolithic first approach to Micro Services architecture, project completed and delivered using Java and Spring Framework. Strong experience developing as a Java Full Stack acting in the Front End, Back End and Database programming and modelling. Worked closely with multi-talented teams, involving the collaboration and understanding of different areas of expertise, such as accounting, tax rules, finance, logistic and sales. Great experience conducting code reviews, building test scripts and controlling releases. Ability working with UML documentation, modelling databases and data structures, designing GUI and developing tests. Advanced knowledge applying relevant concepts such as Design Patterns, REST APIs, Multi-thread programming, Network Protocols HTTP/TCP, Dependency Injection and Continuous Integration. Technical Lead, being responsible for planning, directing, controlling and assessing software development processes and integration. Technologies used: Java, Spring, MySQL, SQL Server, Thymeleaf, JavaScript, HTML, CSS, Bootstrap, Jquery,AWS, React.…see more
+Skills: Microsoft SQL Server · Thymeleaf · JavaScript · jQuery · MySQL · Java · Spring Framework · Amazon Web Services (AWS) · React.js
