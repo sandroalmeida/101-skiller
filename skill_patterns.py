@@ -80,6 +80,7 @@ skill_patterns = {
 
     #(18) Linq
     "linq": [{"LOWER": "linq"}],
+    "language integrated query": [{"LOWER": "language"}, {"LOWER": "integrated"}, {"LOWER": "query"}],
 
     #(19) Matlab
     "matlab": [{"LOWER": "matlab"}],
@@ -175,12 +176,12 @@ skill_patterns = {
     #(43) Hibernate
     "hibernate": [{"LOWER": "hibernate"}],
 
-    #(44) JavaServer Pages
+    #(44) JavaServer Pages (JSP)
     "jsp": [{"LOWER": "jsp"}],
     "javaserver pages": [{"LOWER": "javaserver"}, {"LOWER": "pages"}],
     "java server pages": [{"LOWER": "java"}, {"LOWER": "server"}, {"LOWER": "pages"}],
 
-    #(45) JavaServer Pages (JSP)
+    #(45) Java Database Connectivity (JDBC)
     "jdbc": [{"LOWER": "jdbc"}],
     "java database connectivity": [{"LOWER": "java"}, {"LOWER": "database"}, {"LOWER": "connectivity"}],
 
@@ -275,8 +276,10 @@ skill_patterns = {
     "mysql": [{"LOWER": "mysql"}],
 
     #(70) Oracle Database
-    "oracle": [{"LOWER": "oracle"}],
+    "oracle db": [{"LOWER": "oracle"}, {"LOWER": "db"}],
     "oracledb": [{"LOWER": "oracledb"}],
+    "oracle database": [{"LOWER": "oracle"}, {"LOWER": "database"}],
+    "oracle sql": [{"LOWER": "oracle"}, {"LOWER": "sql"}],
 
     #(71) PostgreSQL
     "postgresql": [{"LOWER": "postgresql"}],
@@ -306,7 +309,6 @@ skill_patterns = {
 
     #(79) Apache Cassandra
     "cassandra": [{"LOWER": "cassandra"}],
-    "apache cassandra": [{"LOWER": "apache"}, {"LOWER": "cassandra"}],
 
     #(80) CockroachDB
     "cockroachdb": [{"LOWER": "cockroachdb"}],
@@ -839,6 +841,7 @@ skill_patterns = {
     "api testing": [{"LOWER": "api"}, {"LOWER": "testing"}],
     "black box testing": [{"LOWER": "black"}, {"LOWER": "box"}, {"LOWER": "testing"}],
     "blackbox testing": [{"LOWER": "blackbox"}, {"LOWER": "testing"}],
+    "functional testing": [{"LOWER": "functional"}, {"LOWER": "testing"}],
 
     #(223) Team Management
     "team management": [{"LOWER": "team"}, {"LOWER": "management"}],

@@ -1,0 +1,107 @@
+ASP
+Visual Basic for Application (VBA)
+Photography
+Kanban
+Scripting Language
+RabbitMQ
+Jakarta Enterprise Bean (EJB)
+Domain Name System (DNS)
+Accounting
+VHSIC Hardware Description Language (VHDL)
+Mechanical Engineering
+Webpack
+Cassandra
+Verilog
+Leadership Development
+IT Operations
+Hive
+Online Marketing
+Email Marketing
+Supply Chain Management
+Microsoft Access
+Organization Skills
+Configuration Management
+Public Relations
+Linux, Apache, MySQL, and PHP (LAMP)
+Creative Problem Solving
+NGINX
+Adobe Flash
+Interpersonal Skills
+Cucumber
+Pandas
+Gradle
+Java Message Service (JMS)
+System Deployment
+Microsoft Outlook
+System Design
+System Applications and Products (SAP)
+Cloud Applications
+Heroku
+Backbone.js
+Product Design
+Direct Sales
+Natural Language Processing (NLP)
+Human Resources (HR)
+Project Portfolio Management
+OpenCV
+Sales Process
+Information Assurance
+Splunk Technology
+Spanish
+Business Requirements
+NetBeans
+Aerospace
+Jest
+Microsoft Visual C++
+Postman API
+Data Engineering
+Virtual Private Network (VPN)
+SoapUI
+go-to-market (GTM) strategy
+Test Management
+Contract Management
+Presentation Skills
+Blockchain
+Concurrent Versioning System (CVS)
+Adobe InDesign
+Online Advertising
+Scikit-Learn
+Language Integrated Query (LINQ)
+Functional Programming
+Requirements Management
+B2B (business-to-business)
+MapReduce
+Data Integration
+Proposal Writing
+Big Data Analytics
+Data Entry
+Executive Management
+Quality Center
+Dreamweaver
+Android SDK
+JavaServer Faces (JSF)
+Signal Processing
+Performance Testing
+Embedded C
+Project Engineering
+Marketing Communications
+People Management
+Network Design
+Help Desk Support
+Game Programming
+Data Management
+High Availability
+Web Analytics
+Computer-Aided Design (CAD)
+Database Development
+VMware
+PyTorch
+Customer Support
+Project Management Office (PMO)
+Network Architecture
+Physics
+Wireless Networking
+ArcGIS
+Technical Documentation
+Information Architecture
+Software Implementation
