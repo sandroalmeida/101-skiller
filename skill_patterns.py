@@ -55,10 +55,7 @@ skill_patterns = {
     "vb 6": [{"LOWER": "vb"}, {"LOWER": "6"}],
 
     #(12) C
-    "c programming": [{"LOWER": "c"}, {"LOWER": "programming"}],
-    "c (programming": [{"LOWER": "c"}, {"LOWER": "("}, {"LOWER": "programming"}],
-    "c language": [{"LOWER": "c"}, {"LOWER": "language"}],
-    "c (language": [{"LOWER": "c"}, {"LOWER": "("}, {"LOWER": "language"}],
+    "c" : [{"LOWER": {"NOT_IN": ["objective", "-", "quite", "exactly"]}}, {"LOWER": "c"}, {"LOWER": {"NOT_IN": ["sharp", "+", "#", ".net", "dotnet", "dot", "-", "shell", "*"]}}],
 
     #(13) C++
     "c++": [{"LOWER": "c++"}],
@@ -121,10 +118,7 @@ skill_patterns = {
     "Swift": [{"LOWER": "swift"}],
 
     #(29) R
-    "r programming": [{"LOWER": "c"}, {"LOWER": "programming"}],
-    "r (programming": [{"LOWER": "c"}, {"LOWER": "("}, {"LOWER": "programming"}],
-    "r language": [{"LOWER": "c"}, {"LOWER": "language"}],
-    "r (language": [{"LOWER": "c"}, {"LOWER": "("}, {"LOWER": "language"}],
+    "r" : [{"LOWER": "r"}, {"LOWER": {"NOT_IN": ["+"]}}],
 
     #(30) Typescript
     "typescript": [{"LOWER": "typescript"}],

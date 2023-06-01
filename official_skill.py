@@ -1,16 +1,16 @@
-{
+official_skill ={
     "1|Java|programming language": ["java", "j2ee", "jee"],
     "2|Python|programming language": ["python"],
     "3|CSharp|programming language": ["csharp", "c#", "c sharp", ".net", "dotnet", "dot net"],
     "4|Objective-C|programming language": ["objective-c", "objective c", "objectivec", "objective.c"],
-    "5|GoLang|programming language": ["golang", "go", "go programming", "go language", "go (programming", "go (language"],
+    "5|GoLang|programming language": ["golang", "go", "go programming", "go language"],
     "6|Kotlin|programming language": ["kotlin"],
     "7|Rust|programming language": ["rust"],
     "8|VB.Net|programming language": ["vb.net", "visual basic", "vb", "vb .net", "vb net", "vbnet"],
     "9|ASP.Net|programming language": ["asp.net", "asp .net", "asp net", "aspnet"],
     "10|Bash|programming language": ["bash"],
     "11|Visual Basic|programming language": ["visual basic 6", "vb6", "vb 6"],
-    "12|C|programming language": ["c programming", "c language", "c (programming", "c (language", "\\w+\\sc\\s\\w+"],
+    "12|C|programming language": ["\w+\sc\s\w+", "\w+\sc,"],
     "13|C++|programming language": ["c++", "c ++", "c + +"],
     "14|CSS|programming language": ["css", "css3"],
     "15|GraphQL|programming language": ["graphql"],
@@ -27,7 +27,7 @@
     "26|Shell|programming language": ["shell"],
     "27|Powershell|programming language": ["powershell"],
     "28|Swift|programming language": ["swift"],
-    "29|R|programming language": ["r programming", "r language", "r (programming", "r (language"],
+    "29|R|programming language": ["r\s\w+", "r,"],
     "30|TypeScript|programming language": ["typescript", "type script"],
     "31|SQL|programming language": ["sql", "tsql", "plsql"],
     "32|ADO.NET|framework": ["ado.net", "adonet", "ado net", "ado .net"],
@@ -455,6 +455,4 @@
     "454|Drupal|framework": ["drupal"],
     "455|Finance Understanding|general": ["finance"],
     "456|Open-source software (OSS)|software engineering": ["open source", "open-source", "opensource"]
-
-
 }
