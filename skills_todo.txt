@@ -10,7 +10,6 @@ Accounting
 VHSIC Hardware Description Language (VHDL)
 Mechanical Engineering
 Webpack
-Cassandra
 Verilog
 Leadership Development
 IT Operations
@@ -105,3 +104,7 @@ ArcGIS
 Technical Documentation
 Information Architecture
 Software Implementation
+
+"12|C|programming language": ["\w+\sc\s\w+", "\w+\sc,"],
+"29|R|programming language": ["r\s\w+", "r,"],
+"457|ASP|programming language": ["asp"],
