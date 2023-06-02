@@ -1700,4 +1700,7 @@ skill_patterns = {
     "open-source": [{"LOWER": "open"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "source"}],
     "opensource": [{"LOWER": "opensource"}],
 
+    #(457) ASP Classic
+    "asp": [{"LOWER": "asp"}, {"NOT_IN": ["net", ".net", "dotnet", "dot"]}],
+
 }
