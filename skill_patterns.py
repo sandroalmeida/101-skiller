@@ -804,6 +804,7 @@ skill_patterns = {
 
     #(218) Software Documentation
     "software documentation": [{"LOWER": "software"}, {"LOWER": "documentation"}],
+    "technical documentation": [{"LOWER": "technical"}, {"LOWER": "documentation"}],
 
     #(219) Software Engineering
     "software engineering": [{"LOWER": "software"}, {"LOWER": "engineering"}],
@@ -1702,5 +1703,319 @@ skill_patterns = {
 
     #(457) ASP Classic
     "asp": [{"LOWER": "asp"}, {"NOT_IN": ["net", ".net", "dotnet", "dot"]}],
+
+    #(458) Visual Basic for Application (VBA)
+    "vba": [{"LOWER": "vba"}],
+    "visual basic for application": [{"LOWER": "visual"}, {"LOWER": "basic"}, {"LOWER": "for"}, {"LOWER": "application"}],
+
+    #(459) Photography
+    "photography": [{"LOWER": "photography"}],
+
+    #(460) Kanban
+    "kanban": [{"LOWER": "kanban"}],
+
+    #(461) Scripting Language
+    "scripting language": [{"LOWER": "scripting"}, {"LOWER": "language"}],
+
+    #(462) RabbitMQ
+    "rabbitmq": [{"LOWER": "rabbitmq"}],
+    "rabbit mq": [{"LOWER": "rabbit"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "mq"}],
+
+    #(463) Jakarta Enterprise Bean (EJB)
+    "ejb": [{"LOWER": "ejb"}],
+    "jakarta enterprise bean": [{"LOWER": "jakarta"}, {"LOWER": "enterprise"}, {"LOWER": "bean"}],
+
+    #(464) Domain Name System (DNS)
+    "dns": [{"LOWER": "dns"}],
+    "domain name system": [{"LOWER": "domain"}, {"LOWER": "name"}, {"LOWER": "system"}],
+
+    #(465) Accounting
+    "accounting": [{"LOWER": "accounting"}],
+
+    #(466) VHSIC Hardware Description Language (VHDL)
+    "vhdl": [{"LOWER": "vhdl"}],
+    "vhsic hardware description language": [{"LOWER": "vhsic"}, {"LOWER": "hardware"}, {"LOWER": "description"}, {"LOWER": "language"}],
+
+    #(467) Mechanical Engineering
+    "mechanical engineering": [{"LOWER": "mechanical"}, {"LOWER": "engineering"}],
+
+    #(468) Webpack
+    "webpack": [{"LOWER": "webpack"}],
+
+    #(470) Verilog
+    "verilog": [{"LOWER": "verilog"}],
+
+    #(471) Leadership Development
+    "leadership development": [{"LOWER": "leadership"}, {"LOWER": "development"}],
+
+    #(472) IT Operations
+    "it operations": [{"LOWER": "it"}, {"LOWER": "operations"}],
+
+    #(473) Hive
+    "hive": [{"LOWER": "hive"}],
+
+    #(474) Online Marketing
+    "online marketing": [{"LOWER": "online"}, {"LOWER": "marketing"}],
+
+    #(475) Email Marketing
+    "email marketing": [{"LOWER": "email"}, {"LOWER": "marketing"}],
+
+    #(476) Supply Chain Management
+    "supply chain management": [{"LOWER": "supply"}, {"LOWER": "chain"}, {"LOWER": "management"}],
+
+    #(478) Organization Skills
+    "organization skills": [{"LOWER": "organization"}, {"LOWER": "skills"}],
+
+    #(479) Configuration Management
+    "configuration management": [{"LOWER": "configuration"}, {"LOWER": "management"}],
+
+    #(480) Public Relations
+    "public relations": [{"LOWER": "public"}, {"LOWER": "relations"}],
+
+    #(481) Linux, Apache, MySQL, and PHP (LAMP)
+    "lamp": [{"LOWER": "lamp"}],
+
+    #(482) Creative Problem Solving
+    "creative problem solving": [{"LOWER": "creative"}, {"LOWER": "problem"}, {"LOWER": "solving"}],
+
+    #(483) NGINX
+    "nginx": [{"LOWER": "nginx"}],
+
+    #(484) Adobe Flash
+    "adobe flash": [{"LOWER": "adobe"}, {"LOWER": "flash"}],
+
+    #(485) Interpersonal Skills
+    "interpersonal skills": [{"LOWER": "interpersonal"}, {"LOWER": "skills"}],
+
+    #(486) Cucumber
+    "cucumber": [{"LOWER": "cucumber"}],
+
+    #(487) Pandas
+    "pandas": [{"LOWER": "pandas"}],
+
+    #(488) Gradle
+    "gradle": [{"LOWER": "gradle"}],
+
+    #(489) Java Message Service (JMS)
+    "jms": [{"LOWER": "jms"}],
+    "java message service": [{"LOWER": "java"}, {"LOWER": "message"}, {"LOWER": "service"}],
+
+    #(490) System Deployment
+    "system deployment": [{"LOWER": "system"}, {"LOWER": "deployment"}],
+
+    #(491) Microsoft Outlook
+    "microsoft outlook": [{"LOWER": "microsoft"}, {"LOWER": "outlook"}],
+
+    #(492) System Design
+    "system design": [{"LOWER": "system"}, {"LOWER": "design"}],
+
+    #(493) System Applications and Products (SAP)
+    "sap": [{"LOWER": "sap"}],
+
+    #(494) Cloud Applications
+    "cloud applications": [{"LOWER": "cloud"}, {"LOWER": "applications"}],
+
+    #(495) Heroku
+    "heroku": [{"LOWER": "heroku"}],
+
+    #(496) Backbone.JS
+    "backbone.js": [{"LOWER": "backbone.js"}],
+    "backbone js": [{"LOWER": "backbone"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "js"}],
+    "backbonejs": [{"LOWER": "backbonejs"}],
+
+    #(497) Product Design
+    "product design": [{"LOWER": "product"}, {"LOWER": "design"}],
+
+    #(498) Direct Sales
+    "direct sales": [{"LOWER": "direct"}, {"LOWER": "sales"}],
+
+    #(499) Natural Language Processing (NLP)
+    "nlp": [{"LOWER": "nlp"}],
+    "natural language processing": [{"LOWER": "natural"}, {"LOWER": "language"}, {"LOWER": "processing"}],
+
+    #(500) Human Resources (HR)
+    "hr": [{"LOWER": "hr"}],
+    "human resources": [{"LOWER": "human"}, {"LOWER": "resources"}],
+
+    #(501) Project Portfolio Management
+    "project portfolio management": [{"LOWER": "project"}, {"LOWER": "portfolio"}, {"LOWER": "management"}],
+
+    #(502) OpenCV
+    "opencv": [{"LOWER": "opencv"}],
+
+    #(503) Sales Process
+    "sales process": [{"LOWER": "sales"}, {"LOWER": "process"}],
+
+    #(504) Information Assurance
+    "information assurance": [{"LOWER": "information"}, {"LOWER": "assurance"}],
+
+    #(505) Splunk Technology
+    "splunk": [{"LOWER": "splunk"}],
+
+    #(506) Spanish
+    "spanish": [{"LOWER": "spanish"}],
+
+    #(508) NetBeans
+    "netbeans": [{"LOWER": "netbeans"}],
+
+    #(509) Aerospace
+    "aerospace": [{"LOWER": "aerospace"}],
+
+    #(510) Jest
+    "jest": [{"LOWER": "jest"}],
+
+    #(511) Microsoft Visual C++
+    "microsoft visual c++": [{"LOWER": "microsoft"}, {"LOWER": "visual"}, {"LOWER": "c++"}],
+
+    #(512) Postman API
+    "postman": [{"LOWER": "postman"}],
+
+    #(513) Data Engineering
+    "data engineering": [{"LOWER": "data"}, {"LOWER": "engineering"}],
+
+    #(514) Virtual Private Network (VPN)
+    "vpn": [{"LOWER": "vpn"}],
+    "virtual private network": [{"LOWER": "virtual"}, {"LOWER": "private"}, {"LOWER": "network"}],
+
+    #(515) SoapUI
+    "soapui": [{"LOWER": "soapui"}],
+
+    #(516) go-to-market (GTM) strategy
+    "go-to-market": [{"LOWER": "go-to-market"}],
+    "gtm": [{"LOWER": "gtm"}],
+
+    #(517) Test Management
+    "test management": [{"LOWER": "test"}, {"LOWER": "management"}],
+
+    #(518) Contract Management
+    "contract management": [{"LOWER": "contract"}, {"LOWER": "management"}],
+
+    #(519) Presentation Skills
+    "presentation skills": [{"LOWER": "presentation"}, {"LOWER": "skills"}],
+
+    #(520) Blockchain Technology
+    "blockchain": [{"LOWER": "blockchain"}],
+
+    #(521) Concurrent Versioning System (CVS)
+    "cvs": [{"LOWER": "cvs"}],
+    "concurrent versioning system": [{"LOWER": "concurrent"}, {"LOWER": "versioning"}, {"LOWER": "system"}],
+
+    #(522) Adobe InDesign
+    "indesign": [{"LOWER": "indesign"}],
+
+    #(523) Online Advertising
+    "online advertising": [{"LOWER": "online"}, {"LOWER": "advertising"}],
+
+    #(524) Scikit-Learn
+    "scikit": [{"LOWER": "scikit"}],
+
+    #(526) Functional Programming
+    "functional programming": [{"LOWER": "functional"}, {"LOWER": "programming"}],
+
+    #(527) Requirements Management
+    "requirements management": [{"LOWER": "requirements"}, {"LOWER": "management"}],
+
+    #(528) B2B (business-to-business)
+    "b2b": [{"LOWER": "b2b"}],
+    "business-to-business": [{"LOWER": "business"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "to"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "business"}],
+
+    #(529) MapReduce
+    "mapreduce": [{"LOWER": "mapreduce"}],
+
+    #(530) Data Integration
+    "data integration": [{"LOWER": "data"}, {"LOWER": "integration"}],
+
+    #(531) Proposal Writing
+    "proposal writing": [{"LOWER": "proposal"}, {"LOWER": "writing"}],
+
+    #(532) Big Data Analytics
+    "big data analytics": [{"LOWER": "big"}, {"LOWER": "data"}, {"LOWER": "analytics"}],
+
+    #(533) Data Entry
+    "data entry": [{"LOWER": "data"}, {"LOWER": "entry"}],
+
+    #(534) Executive Management
+    "executive management": [{"LOWER": "executive"}, {"LOWER": "management"}],
+
+    #(535) Quality Center
+    "quality center": [{"LOWER": "quality"}, {"LOWER": "center"}],
+
+    #(536) Dreamweaver
+    "dreamweaver": [{"LOWER": "dreamweaver"}],
+
+    #(538) JavaServer Faces (JSF)
+    "jsf": [{"LOWER": "jsf"}],
+    "javaserver faces": [{"LOWER": "javaserver"}, {"LOWER": "faces"}],
+
+    #(539) Signal Processing
+    "signal processing": [{"LOWER": "signal"}, {"LOWER": "processing"}],
+
+    #(540) Performance Testing
+    "performance testing": [{"LOWER": "performance"}, {"LOWER": "testing"}],
+
+    #(541) Embedded C
+    "embedded c": [{"LOWER": "embedded"}, {"LOWER": "c"}],
+
+    #(542) Project Engineering
+    "project engineering": [{"LOWER": "project"}, {"LOWER": "engineering"}],
+
+    #(543) Marketing Communications
+    "marketing communications": [{"LOWER": "marketing"}, {"LOWER": "communications"}],
+
+    #(544) People Management
+    "people management": [{"LOWER": "people"}, {"LOWER": "management"}],
+
+    #(545) Network Design
+    "network design": [{"LOWER": "network"}, {"LOWER": "design"}],
+
+    #(546) Help Desk Support
+    "help desk support": [{"LOWER": "help"}, {"LOWER": "desk"}, {"LOWER": "support"}],
+
+    #(547) Game Programming
+    "game programming": [{"LOWER": "game"}, {"LOWER": "programming"}],
+
+    #(548) Data Management
+    "data management": [{"LOWER": "data"}, {"LOWER": "management"}],
+
+    #(549) High Availability
+    "high availability": [{"LOWER": "high"}, {"LOWER": "availability"}],
+
+    #(550) Web Analytics
+    "web analytics": [{"LOWER": "web"}, {"LOWER": "analytics"}],
+
+    #(551) Computer-Aided Design (CAD)
+    "cad": [{"LOWER": "cad"}],
+    "computer-aided design": [{"LOWER": "computer"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "aided"}, {"LOWER": "design"}],
+
+    #(552) Database Development
+    "database development": [{"LOWER": "database"}, {"LOWER": "development"}],
+
+    #(554) PyTorch
+    "pytorch": [{"LOWER": "pytorch"}],
+
+    #(555) Customer Support
+    "customer support": [{"LOWER": "customer"}, {"LOWER": "support"}],
+
+    #(556) Project Management Office (PMO)
+    "pmo": [{"LOWER": "pmo"}],
+    "project management office": [{"LOWER": "project"}, {"LOWER": "management"}, {"LOWER": "office"}],
+
+    #(557) Network Architecture
+    "network architecture": [{"LOWER": "network"}, {"LOWER": "architecture"}],
+
+    #(558) Physics
+    "physics": [{"LOWER": "physics"}],
+
+    #(559) Wireless Networking
+    "wireless networking": [{"LOWER": "wireless"}, {"LOWER": "networking"}],
+
+    #(560) ArcGIS
+    "arcgis": [{"LOWER": "arcgis"}],
+
+    #(562) Information Architecture
+    "information architecture": [{"LOWER": "information"}, {"LOWER": "architecture"}],
+
+    #(563) Software Implementation
+    "software implementation": [{"LOWER": "software"}, {"LOWER": "implementation"}],
 
 }
