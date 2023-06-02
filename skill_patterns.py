@@ -55,7 +55,7 @@ skill_patterns = {
     "vb 6": [{"LOWER": "vb"}, {"LOWER": "6"}],
 
     #(12) C
-    "c" : [{"LOWER": {"NOT_IN": ["objective", "-", "quite", "exactly"]}}, {"LOWER": "c"}, {"LOWER": {"NOT_IN": ["sharp", "+", "#", ".net", "dotnet", "dot", "-", "shell", "*"]}}],
+    "c" : [{"LOWER": {"NOT_IN": ["objective", "-", "quite", "exactly", "Embedded"]}}, {"LOWER": "c"}, {"LOWER": {"NOT_IN": ["sharp", "+", "#", ".net", "dotnet", "dot", "-", "shell", "*"]}}],
 
     #(13) C++
     "c++": [{"LOWER": "c++"}],
@@ -105,9 +105,6 @@ skill_patterns = {
 
     #(24) Scala
     "Scala": [{"LOWER": "scala"}],
-
-    #(25) SASS
-    "SASS": [{"LOWER": "sass"}],
 
     #(26) Shell
     "Shell": [{"LOWER": "shell"}],
@@ -513,9 +510,6 @@ skill_patterns = {
     #(137) Tortoise SVN
     "tortoise": [{"LOWER": "tortoise"}],
 
-    #(138) Ubuntu
-    "ubuntu": [{"LOWER": "ubuntu"}],
-
     #(139) Unix
     "unix": [{"LOWER": "unix"}],
 
@@ -589,9 +583,6 @@ skill_patterns = {
 
     #(158) Critical Thinking
     "critical thinking": [{"LOWER": "critical"}, {"LOWER": "thinking"}],
-
-    #(159) Azure
-    "azure": [{"LOWER": "azure"}],
 
     #(160) BackEnd Development
     "backend": [{"LOWER": "backend"}],
@@ -1354,12 +1345,6 @@ skill_patterns = {
     "amazon msk": [{"LOWER": "amazon"}, {"LOWER": "msk"}],
     "aws msk": [{"LOWER": "aws"}, {"LOWER": "msk"}],
     "managed streaming for apache kafka": [{"LOWER": "managed"}, {"LOWER": "streaming"}, {"LOWER": "for"}, {"LOWER": "apache"}, {"LOWER": "kafka"}],
-
-    #(355) AWS Database Migration Service (Amazon DMS)
-    "aws dms": [{"LOWER": "aws"}, {"LOWER": "dms"}],
-    "amazon dms": [{"LOWER": "amazon"}, {"LOWER": "dms"}],
-    "aws database migration service": [{"LOWER": "database"}, {"LOWER": "migration"}, {"LOWER": "service"}],
-    "amazon database migration service": [{"LOWER": "amazon"}, {"LOWER": "database"}, {"LOWER": "migration"}, {"LOWER": "service"}],
 
     #(356) Amazon SageMaker
     "sagemaker": [{"LOWER": "sagemaker"}],
