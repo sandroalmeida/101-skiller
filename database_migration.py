@@ -1,5 +1,6 @@
 import mysql.connector
 from official_skill import official_skill
+from skill_patterns import skill_patterns
 
 mydb = mysql.connector.connect(
   host="localhost",
@@ -41,3 +42,4 @@ for key, aliases in official_skill.items():
         mycursor.execute(sql, val)
 
 mydb.commit()
+
