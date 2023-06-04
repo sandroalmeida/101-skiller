@@ -18,15 +18,9 @@
 # if match:
 #     print("Match at index %s, %s" % (match.start(), match.end()))
 
-skill_patterns = {
-    "Java": [
-        ("java", [{"LOWER": "java"}]),
-        ("jee", [{"LOWER": "jee"}]),
-        ("j2ee", [{"LOWER": "j2ee"}])
-    ]
-}
+from skill_patterns_dictionary import skill_patterns
+
 for skill, patterns in skill_patterns.items():
     print(skill)
-    for pattern in patterns:
-        print(pattern[0])
-        print(pattern[1])
+    for items in patterns:
+        print(items[0], ' - ', items[1])
