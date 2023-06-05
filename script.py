@@ -1,8 +1,28 @@
 import spacy
-from skill_patterns import skill_patterns
 from spacy.matcher import Matcher
-from official_skill import official_skill
 import re
+import mysql.connector
+import json
+
+# Connect to the database
+cnx = mysql.connector.connect(
+    user='root',
+    password='AlAcT@1306',
+    host='localhost',
+    database='profile_dashboard'
+)
+
+# Get the skill patterns from the database
+cursor = cnx.cursor()
+query = ("SELECT name, pattern, skill_id FROM skill_pattern")
+cursor.execute(query)
+skill_patterns = cursor.fetchall()
+
+# Get the skills from the database
+cursor = cnx.cursor()
+query = ("SELECT skill_id, skill_description, category, alias, regex FROM skill_view")
+cursor.execute(query)
+skills = cursor.fetchall()
 
 # Load a language model
 nlp = spacy.load("en_core_web_lg")
@@ -23,25 +43,24 @@ doc = nlp(text)
 matcher = Matcher(nlp.vocab, validate=True)
 
 # Add each skill pattern to the matcher object using a loop
-for pattern_name, pattern in skill_patterns.items():
-    matcher.add(pattern_name, [pattern])
+for pattern_name, pattern, skill_id in skill_patterns:
+    matcher.add(pattern_name, [json.loads(pattern)])
 
-# Find all matches of the pattern in the doc
+# # Find all matches of the pattern in the doc
 matches = matcher(doc)
 
-# Collect the unique skill names and unmatched strings in a set
+# # Collect the unique skill names and unmatched strings in a set
 official_skill_list = set()
 not_official_skill_list = set()
 for match_id, start, end in matches:
     match_text = doc[start:end].text
 
-    for skill_name, skill_aliases in official_skill.items():
-        if any(
-            (isinstance(alias, str) and alias.lower() == match_text.lower()) or
-            (isinstance(alias, str) and re.match(alias, match_text.lower(), re.IGNORECASE))
-            for alias in skill_aliases
+    for skill_id, skill_description, category, alias, regex in skills:
+        if (
+            (alias is not None and alias.lower() == match_text.lower()) or
+            (regex is not None and re.match(regex, match_text.lower(), re.IGNORECASE))
         ):
-            official_skill_list.add(skill_name)
+            official_skill_list.add(skill_description)
             break
     else:
         not_official_skill_list.add(match_text)

@@ -10,15 +10,15 @@ skill_patterns = {
     "CSharp": [
         ("csharp", '[{"LOWER": "csharp"}]'),
         ("c sharp", '[{"LOWER": "c"}, {"LOWER": "sharp"}]'),
-        ("c#", '[{"LOWER": "c"},{"TEXT": {"REGEX": "#"}}]'),
+        ("c#", '[{"LOWER": "c"},{"TEXT": {"REGEX": "#"} }]'),
     ],
     "Objective-C": [ 
-        ("objective-c", '[{"LOWER": "objective"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "c"}]'),
+        ("objective-c", '[{"LOWER": "objective"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "c"}]'),
         ("objectivec", '[{"LOWER": "objectivec"}]'),
         ("objective.c", '[{"LOWER": "objective.c"}]'),
     ],
     "Golang": [
-        ("go", '[{"IS_TITLE": True, "LOWER": "go"}]'),
+        ("go", '[{"IS_TITLE": true, "LOWER": "go"}]'),
         ("golang", '[{"LOWER": "golang"}]'),
         ("go programming", '[{"LOWER": "go"}, {"LOWER": "programming"}]'),
         ("go (programming", '[{"LOWER": "go"}, {"LOWER": "("}, {"LOWER": "programming"}]'),
@@ -54,7 +54,7 @@ skill_patterns = {
         ("vb 6", '[{"LOWER": "vb"}, {"LOWER": "6"}]'),
     ],
     "C": [
-        ("c" , '[{"LOWER": {"NOT_IN": ["objective", "-", "quite", "exactly", "Embedded"]\}\}, {"LOWER": "c"}, {"LOWER": {"NOT_IN": ["sharp", "+", "#", ".net", "dotnet", "dot", "-", "shell", "*"]\}\}]'),
+        ("c" , '[{"LOWER": {"NOT_IN": ["objective", "-", "quite", "exactly", "Embedded"]} }, {"LOWER": "c"}, {"LOWER": {"NOT_IN": ["sharp", "+", "#", ".net", "dotnet", "dot", "-", "shell", "*"]} }]'),
     ],
     "C++": [
         ("c++", '[{"LOWER": "c++"}]'),
@@ -115,7 +115,7 @@ skill_patterns = {
         ("Swift", '[{"LOWER": "swift"}]'),
     ],
     "R": [
-        ("r" , '[{"LOWER": "r"}, {"LOWER": {"NOT_IN": ["+"]\}\}]'),
+        ("r" , '[{"LOWER": "r"}, {"LOWER": {"NOT_IN": ["+"]} }]'),
     ],
     "Typescript": [
         ("typescript", '[{"LOWER": "typescript"}]'),
@@ -313,7 +313,7 @@ skill_patterns = {
     ],
     "Microsoft Access": [
         ("microsoft access", '[{"LOWER": "microsoft"}, {"LOWER": "access"}]'),
-        ("Access", '[{"IS_TITLE": True, "LOWER": "access"}]'),
+        ("Access", '[{"IS_TITLE": true, "LOWER": "access"}]'),
     ],
     "Vertica": [
         ("vertica", '[{"LOWER": "vertica"}]'),
@@ -403,7 +403,7 @@ skill_patterns = {
     ],
     "E-commerce": [
         ("ecommerce", '[{"LOWER": "ecommerce"}]'),
-        ("e-commerce", '[{"LOWER": "e"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "commerce"}]'),
+        ("e-commerce", '[{"LOWER": "e"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "commerce"}]'),
     ],
     "Eclipse IDE": [
         ("eclipse", '[{"LOWER": "eclipse"}]'),
@@ -587,7 +587,7 @@ skill_patterns = {
     ],
     "BackEnd Development": [ 
         ("backend", '[{"LOWER": "backend"}]'),
-        ("back-end", '[{"LOWER": "back"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "end"}]'),
+        ("back-end", '[{"LOWER": "back"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "end"}]'),
     ],
     "Big Data": [
         ("bigdata", '[{"LOWER": "bigdata"}]'),
@@ -606,7 +606,7 @@ skill_patterns = {
     "Continuous Integration and Continuous Delivery (CI/CD)": [
         ("continuous integration", '[{"LOWER": "continuous"}, {"LOWER": "integration"}]'),
         ("continuous delivery", '[{"LOWER": "continuous"}, {"LOWER": "delivery"}]'),
-        ("ci/cd", '[{"LOWER": "ci"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "cd"}]'),
+        ("ci/cd", '[{"LOWER": "ci"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "cd"}]'),
     ],
     "Data Mining": [
         ("data mining", '[{"LOWER": "data"}, {"LOWER": "mining"}]'),
@@ -665,11 +665,11 @@ skill_patterns = {
     ],
     "FrontEnd Development": [
         ("frontend", '[{"LOWER": "frontend"}]'),
-        ("front-end", '[{"LOWER": "front"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "end"}]'),
+        ("front-end", '[{"LOWER": "front"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "end"}]'),
     ],
      "FullStack Development": [
         ("fullstack", '[{"LOWER": "fullstack"}]'),
-        ("full-stack", '[{"LOWER": "full"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "stack"}]'),
+        ("full-stack", '[{"LOWER": "full"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "stack"}]'),
     ],
     "Game Design": [
         ("game design", '[{"LOWER": "game"}, {"LOWER": "design"}]'),
@@ -710,7 +710,7 @@ skill_patterns = {
     ],
     "Multithreading": [
         ("multithreading", '[{"LOWER": "multithreading"}]'),
-        ("multi-threading", '[{"LOWER": "multi"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "threading"}]'),
+        ("multi-threading", '[{"LOWER": "multi"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "threading"}]'),
     ],
      "Network Administration": [
         ("networking administration", '[{"LOWER": "networking"}, {"LOWER": "administration"}]'),
@@ -719,7 +719,7 @@ skill_patterns = {
         ("nosql", '[{"LOWER": "nosql"}]'),
     ],
     "Object-Oriented Programming (OOP)": [
-        ("object-oriented", '[{"LOWER": "object"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "oriented"}]'),
+        ("object-oriented", '[{"LOWER": "object"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "oriented"}]'),
         ("oop", '[{"LOWER": "oop"}]'),
     ],
     "Project Management Professional (PMP)": [
@@ -728,8 +728,8 @@ skill_patterns = {
     ],
     "MacOS": [
         ("macos", '[{"LOWER": "macos"}]'),
-        ("mac os:", '[{"LOWER": "mac"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "os"}]'),
-        ("os x", '[{"LOWER": "os"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "x"}]'),
+        ("mac os:", '[{"LOWER": "mac"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "os"}]'),
+        ("os x", '[{"LOWER": "os"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "x"}]'),
     ],
     "Product Management": [
         ("product management", '[{"LOWER": "product"}, {"LOWER": "management"}]'),
@@ -859,8 +859,8 @@ skill_patterns = {
         ("user interface", '[{"LOWER": "user"}, {"LOWER": "interface"}]'),
         ("ux design", '[{"LOWER": "ux"}, {"LOWER": "design"}]'),
         ("ui design", '[{"LOWER": "ui"}, {"LOWER": "design"}]'),
-        ("ui/ux", '[{"LOWER": "ui"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "ux"}]'),
-        ("ux/ui", '[{"LOWER": "ux"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "ui"}]'),
+        ("ui/ux", '[{"LOWER": "ui"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "ux"}]'),
+        ("ux/ui", '[{"LOWER": "ux"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "ui"}]'),
     ],
      "Unified Modeling Language (UML)": [
         ("unified modeling language", '[{"LOWER": "unified"}, {"LOWER": "modeling"}, {"LOWER": "language"}]'),
@@ -995,7 +995,7 @@ skill_patterns = {
         ("shell script", '[{"LOWER": "shell"}, {"LOWER": "script"}]'),
     ],
     "Cross-functional Team Leadership":[
-        ("cross functional team leadership", '[{"LOWER": "cross"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "functional"}, {"LOWER": "team"}, {"LOWER": "leadership"}]'),
+        ("cross functional team leadership", '[{"LOWER": "cross"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "functional"}, {"LOWER": "team"}, {"LOWER": "leadership"}]'),
     ],
     "Business Development":[
         ("business development", '[{"LOWER": "business"}, {"LOWER": "development"}]'),
@@ -1028,13 +1028,13 @@ skill_patterns = {
     "Transmission Control Protocol/Internet Protocol (TCP/IP)": [
         ("transmission control protocol", '[{"LOWER": "transmission"}, {"LOWER": "control"}, {"LOWER": "protocol"}]'),
         ("internet protocol", '[{"LOWER": "internet"}, {"LOWER": "protocol"}]'),
-        ("tcp/ip", '[{"LOWER": "tcp"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "ip"}]'),
+        ("tcp/ip", '[{"LOWER": "tcp"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "ip"}]'),
     ],
     "Startup Environment":[
         ("startup", '[{"LOWER": "startup"}]'),
         ("startups", '[{"LOWER": "startups"}]'),
-        ("start-ups", '[{"LOWER": "start"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "ups"}]'),
-        ("start-up", '[{"LOWER": "start"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "up"}]'),
+        ("start-ups", '[{"LOWER": "start"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "ups"}]'),
+        ("start-up", '[{"LOWER": "start"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "up"}]'),
     ],
     "Analytical Skills":[
         ("analytical skills", '[{"LOWER": "analytical"}, {"LOWER": "skills"}]'),
@@ -1306,8 +1306,8 @@ skill_patterns = {
     "AWS Single Sign-On (Amazon SSO)":[
         ("aws sso", '[{"LOWER": "aws"}, {"LOWER": "sso"}]'),
         ("amazon sso", '[{"LOWER": "amazon"}, {"LOWER": "sso"}]'),
-        ("aws single sign-on", '[{"LOWER": "aws"}, {"LOWER": "single"}, {"LOWER": "sign"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "on"}]'),
-        ("amazon single sign-on", '[{"LOWER": "amazon"}, {"LOWER": "single"}, {"LOWER": "sign"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "on"}]'),
+        ("aws single sign-on", '[{"LOWER": "aws"}, {"LOWER": "single"}, {"LOWER": "sign"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "on"}]'),
+        ("amazon single sign-on", '[{"LOWER": "amazon"}, {"LOWER": "single"}, {"LOWER": "sign"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "on"}]'),
     ],
     "Amazon Athena":[
         ("amazon athena", '[{"LOWER": "amazon"}, {"LOWER": "athena"}]'),
@@ -1447,8 +1447,8 @@ skill_patterns = {
         ("amazon trusted advisor", '[{"LOWER": "amazon"}, {"LOWER": "trusted"}, {"LOWER": "advisor"}]'),
     ],
     "AWS Well-Architected Tool": [
-        ("aws well-architected tool", '[{"LOWER": "aws"}, {"LOWER": "well"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "architected"}, {"LOWER": "tool"}]'),
-        ("amazon well-architected tool", '[{"LOWER": "amazon"}, {"LOWER": "well"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "architected"}, {"LOWER": "tool"}]'),
+        ("aws well-architected tool", '[{"LOWER": "aws"}, {"LOWER": "well"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "architected"}, {"LOWER": "tool"}]'),
+        ("amazon well-architected tool", '[{"LOWER": "amazon"}, {"LOWER": "well"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "architected"}, {"LOWER": "tool"}]'),
     ],
     "AWS Control Tower":[
         ("aws control tower", '[{"LOWER": "aws"}, {"LOWER": "control"}, {"LOWER": "tower"}]'),
@@ -1486,7 +1486,7 @@ skill_patterns = {
         ("electrical engineering", '[{"LOWER": "electrical"}, {"LOWER": "engineering"}]'),
     ],
     "Pre-sales Operations": [
-        ("pre-sales", '[{"LOWER": "pre"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "sales"}]'),
+        ("pre-sales", '[{"LOWER": "pre"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "sales"}]'),
     ],
     "Cloud Security": [
         ("cloud security", '[{"LOWER": "cloud"}, {"LOWER": "security"}]'),
@@ -1562,8 +1562,8 @@ skill_patterns = {
         ("financial analysis", '[{"LOWER": "financial"}, {"LOWER": "analysis"}]'),
     ],
     "Six Sigma": [
-        ("six sigma", '[{"LOWER": "six"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "sigma"}]'),
-        ("6 sigma", '[{"LOWER": "6"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "sigma"}]'),
+        ("six sigma", '[{"LOWER": "six"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "sigma"}]'),
+        ("6 sigma", '[{"LOWER": "6"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "sigma"}]'),
     ],
     "Arduino": [
         ("arduino", '[{"LOWER": "arduino"}]'),
@@ -1591,7 +1591,7 @@ skill_patterns = {
         ("voip", '[{"LOWER": "voip"}]'),
     ],
     "Microsoft Power BI": [
-        ("power bi", '[{"LOWER": "power"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "bi"}]'),
+        ("power bi", '[{"LOWER": "power"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "bi"}]'),
     ],
     "IBM WebSphere Application Server": [
         ("websphere", '[{"LOWER": "websphere"}]'),
@@ -1626,7 +1626,7 @@ skill_patterns = {
     ],
     "ActionScript": [
         ("actionscript", '[{"LOWER": "actionscript"}]'),
-        ("action-script", '[{"LOWER": "action"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "script"}]'),
+        ("action-script", '[{"LOWER": "action"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "script"}]'),
     ],
     "Groovy": [
         ("groovy", '[{"LOWER": "groovy"}]'),
@@ -1643,7 +1643,7 @@ skill_patterns = {
     ],
     "Microsoft Visual Basic Scripting Edition (VBScript)": [
         ("vbscript", '[{"LOWER": "vbscript"}]'),
-        ("vb-script", '[{"LOWER": "vb"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "script"}]'),
+        ("vb-script", '[{"LOWER": "vb"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "script"}]'),
         ("visual basic script", '[{"LOWER": "visual"}, {"LOWER": "basic"}, {"LOWER": "script"}]'),
         ("visual basic scripting", '[{"LOWER": "visual"}, {"LOWER": "basic"}, {"LOWER": "scripting"}]'),
     ],
@@ -1658,7 +1658,7 @@ skill_patterns = {
         ("numpy", '[{"LOWER": "numpy"}]'),
     ],
     "Real-Time Operating System (RTOS)": [
-        ("real-time operating system", '[{"LOWER": "real"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "time"}, {"LOWER": "operating"}, {"LOWER": "system"}]'),
+        ("real-time operating system", '[{"LOWER": "real"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "time"}, {"LOWER": "operating"}, {"LOWER": "system"}]'),
         ("rtos", '[{"LOWER": "rtos"}]'),
     ],
     "Bitbucket": [
@@ -1688,7 +1688,7 @@ skill_patterns = {
         ("retail", '[{"LOWER": "retail"}]'),
     ],
     "Qt (toolkit)": [
-        ("qt", '[{"IS_TITLE": True, "LOWER": "qt"}]'),
+        ("qt", '[{"IS_TITLE": true, "LOWER": "qt"}]'),
     ],
     "Drupal": [
         ("drupal", '[{"LOWER": "drupal"}]'),
@@ -1697,11 +1697,11 @@ skill_patterns = {
         ("finance", '[{"LOWER": "finance"}]'),
     ],
     "Open-source software (OSS)": [
-        ("open-source", '[{"LOWER": "open"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "source"}]'),
+        ("open-source", '[{"LOWER": "open"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "source"}]'),
         ("opensource", '[{"LOWER": "opensource"}]'),
     ],
     "ASP Classic": [
-        ("asp", '[{"LOWER": "asp"}, {"NOT_IN": ["net", ".net", "dotnet", "dot"]}]'),
+        ("asp", '[{"LOWER": "asp"}, {"LOWER": {"NOT_IN": ["net", ".net", "dotnet", "dot"]} }]'),
     ],
     "Visual Basic for Application (VBA)": [
         ("vba", '[{"LOWER": "vba"}]'),
@@ -1718,7 +1718,7 @@ skill_patterns = {
     ],
     "RabbitMQ": [
         ("rabbitmq", '[{"LOWER": "rabbitmq"}]'),
-        ("rabbit mq", '[{"LOWER": "rabbit"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "mq"}]'),
+        ("rabbit mq", '[{"LOWER": "rabbit"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "mq"}]'),
     ],
     "Jakarta Enterprise Bean (EJB)": [
         ("ejb", '[{"LOWER": "ejb"}]'),
@@ -1819,7 +1819,7 @@ skill_patterns = {
     ],
     "Backbone.JS": [
         ("backbone.js", '[{"LOWER": "backbone.js"}]'),
-        ("backbone js", '[{"LOWER": "backbone"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "js"}]'),
+        ("backbone js", '[{"LOWER": "backbone"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "js"}]'),
         ("backbonejs", '[{"LOWER": "backbonejs"}]'),
     ],
     "Product Design": [
@@ -1916,7 +1916,7 @@ skill_patterns = {
     ],
     "B2B (business-to-business)": [
         ("b2b", '[{"LOWER": "b2b"}]'),
-        ("business-to-business", '[{"LOWER": "business"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "to"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "business"}]'),
+        ("business-to-business", '[{"LOWER": "business"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "to"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "business"}]'),
     ],
     "MapReduce": [
         ("mapreduce", '[{"LOWER": "mapreduce"}]'),
@@ -1984,7 +1984,7 @@ skill_patterns = {
     ],
     "Computer-Aided Design (CAD)": [
         ("cad", '[{"LOWER": "cad"}]'),
-        ("computer-aided design", '[{"LOWER": "computer"}, {"IS_PUNCT": True, "OP": "?"}, {"LOWER": "aided"}, {"LOWER": "design"}]'),
+        ("computer-aided design", '[{"LOWER": "computer"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "aided"}, {"LOWER": "design"}]'),
     ],
     "Database Development": [
         ("database development", '[{"LOWER": "database"}, {"LOWER": "development"}]'),

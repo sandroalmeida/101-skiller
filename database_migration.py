@@ -74,4 +74,3 @@ for key, patterns in skill_patterns.items():
         mycursor.execute(sql, val)
 
 mydb.commit()
-
