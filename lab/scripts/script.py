@@ -4,14 +4,19 @@ import re
 import mysql.connector
 import json
 import os
+import sys
+
+# Get the absolute path of the current script
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Add the 'resources' folder to the Python module search path
+resources_path = os.path.join(current_dir, '..', '..', 'application/resources')
+sys.path.append(resources_path)
+
+from config import database_config
 
 # Connect to the database
-cnx = mysql.connector.connect(
-    user='root',
-    password='AlAcT@1306',
-    host='localhost',
-    database='profile_dashboard'
-)
+cnx = mysql.connector.connect(**database_config)
 
 # Get the skill patterns from the database
 cursor = cnx.cursor()
@@ -28,15 +33,11 @@ skills = cursor.fetchall()
 # Load a language model
 nlp = spacy.load("en_core_web_lg")
 
-# Get the absolute path of the current script
-current_dir = os.path.dirname(os.path.abspath(__file__))
-
-# Construct the file path
-file_path = os.path.join(current_dir, '..', 'resources', 'resume_test_2.txt')
-
+# Importing the file text
+file_text = os.path.join(current_dir, '..', 'resources', 'resume_test_2.txt')
 
 # Read the text file
-with open(file_path, "r") as file:
+with open(file_text, "r") as file:
     text = file.read()
 
 # Create a doc object
