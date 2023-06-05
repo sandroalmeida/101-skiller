@@ -3,6 +3,7 @@ from spacy.matcher import Matcher
 import re
 import mysql.connector
 import json
+import os
 
 # Connect to the database
 cnx = mysql.connector.connect(
@@ -27,8 +28,15 @@ skills = cursor.fetchall()
 # Load a language model
 nlp = spacy.load("en_core_web_lg")
 
+# Get the absolute path of the current script
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Construct the file path
+file_path = os.path.join(current_dir, '..', 'resources', 'resume_test_2.txt')
+
+
 # Read the text file
-with open("resume_test_2.txt", "r") as file:
+with open(file_path, "r") as file:
     text = file.read()
 
 # Create a doc object

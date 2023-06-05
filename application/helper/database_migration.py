@@ -1,7 +1,17 @@
 import mysql.connector
-from official_skill import official_skill
-from official_skill_regex import official_skill_regex
-from skill_patterns_dictionary import skill_patterns
+import sys
+import os
+
+# Get the absolute path of the current script
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Add the 'resources' folder to the Python module search path
+resources_path = os.path.join(current_dir, '..', 'resources')
+sys.path.append(resources_path)
+
+from v2.official_skill import official_skill
+from v2.official_skill_regex import official_skill_regex
+from v2.skill_patterns_dictionary import skill_patterns
 
 mydb = mysql.connector.connect(
   host="localhost",

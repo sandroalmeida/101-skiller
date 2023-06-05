@@ -1,4 +1,13 @@
 # import re
+import sys
+import os
+
+# Get the absolute path of the current script
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Add the 'resources' folder to the Python module search path
+resources_path = os.path.join(current_dir, '..', '..', 'application/resources')
+sys.path.append(resources_path)
 
 # regex_test = ["test", "\w+\sc\s\w+"]
 # test_string = "xxx Python c Java xxxx"
@@ -18,7 +27,7 @@
 # if match:
 #     print("Match at index %s, %s" % (match.start(), match.end()))
 
-from skill_patterns_dictionary import skill_patterns
+from v2.skill_patterns_dictionary import skill_patterns
 
 for skill, patterns in skill_patterns.items():
     print(skill)
