@@ -1,5 +1,5 @@
 import spacy
-from skill_patterns import skill_patterns
+from application.resources.v1.skill_patterns import skill_patterns
 from spacy.matcher import Matcher
 import json
 

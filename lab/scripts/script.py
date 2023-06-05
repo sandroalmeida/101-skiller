@@ -10,25 +10,18 @@ import sys
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Add the 'resources' folder to the Python module search path
-resources_path = os.path.join(current_dir, '..', '..', 'application/resources')
+resources_path = os.path.join(current_dir, '..', '..', 'application/helper')
 sys.path.append(resources_path)
 
-from config import database_config
-
-# Connect to the database
-cnx = mysql.connector.connect(**database_config)
+# Import the database operations module
+from database_operations import DatabaseOperations
+db_operations = DatabaseOperations()
 
 # Get the skill patterns from the database
-cursor = cnx.cursor()
-query = ("SELECT name, pattern, skill_id FROM skill_pattern")
-cursor.execute(query)
-skill_patterns = cursor.fetchall()
+skill_patterns = db_operations.fetch_skill_patterns()
 
 # Get the skills from the database
-cursor = cnx.cursor()
-query = ("SELECT skill_id, skill_description, category, alias, regex FROM skill_view")
-cursor.execute(query)
-skills = cursor.fetchall()
+skills = db_operations.fetch_skills()
 
 # Load a language model
 nlp = spacy.load("en_core_web_lg")
