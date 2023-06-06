@@ -1,7 +1,6 @@
 import spacy
 from spacy.matcher import Matcher
 import re
-import mysql.connector
 import json
 import os
 import sys

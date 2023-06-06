@@ -1,5 +1,5 @@
 import unittest
-from extract_skills import extract_skills
+from api.extract_skills import extract_skills
 
 class TestExtractSkills(unittest.TestCase):
 
