@@ -51,7 +51,7 @@ def extract_skills(resume_text):
                 (alias is not None and alias.lower() == match_text.lower()) or
                 (regex is not None and re.match(regex, match_text.lower(), re.IGNORECASE))
             ):
-                official_skill_list.add(skill_description)
+                official_skill_list.add(skill_id + ' - ' + skill_description + ' - ' + category)
                 break
         else:
             not_official_skill_list.add(match_text)
