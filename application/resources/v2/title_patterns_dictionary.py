@@ -1,0 +1,37 @@
+skill_patterns = {
+    "Software Engineer": [
+        ("software engineer", '[{"LOWER": {"NOT_IN": ["senior", "sr", "sr."]} }, {"LOWER": "software"}, {"LOWER": "engineer"}, {"LOWER": {"NOT_IN": ["III", "IV"]} }]'),
+        ("software developer", '[{"LOWER": {"NOT_IN": ["senior", "sr", "sr."]} }, {"LOWER": "software"}, {"LOWER": "developer"}]'),
+        ("programmer developer", '[{"LOWER": {"NOT_IN": ["senior", "sr", "sr."]} }, {"LOWER": "programmer"}, {"LOWER": "developer"}]'),
+        ("software development engineer", '[{"LOWER": {"NOT_IN": ["senior", "sr", "sr."]} }, {"LOWER": "software"}, {"LOWER": "development"}, {"LOWER": "engineer"}]'),
+        ("programmer analyst", '[{"LOWER": {"NOT_IN": ["senior", "sr", "sr."]} }, {"LOWER": "programmer"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "analyst"}]'),
+        ("application developer", '[{"LOWER": {"NOT_IN": ["senior", "sr", "sr."]} }, {"LOWER": "application"}, {"LOWER": "developer"}]'),
+        ("systems engineer", '[{"LOWER": {"NOT_IN": ["senior", "sr", "sr."]} }, {"LOWER": "systems"}, {"LOWER": "engineer"}]'),
+        ("system engineer", '[{"LOWER": {"NOT_IN": ["senior", "sr", "sr."]} }, {"LOWER": "system"}, {"LOWER": "engineer"}]'),
+        ("computer programmer", '[{"LOWER": {"NOT_IN": ["senior", "sr", "sr."]} }, {"LOWER": "computer"}, {"LOWER": "programmer"}]'),
+        ("software programmer", '[{"LOWER": {"NOT_IN": ["senior", "sr", "sr."]} }, {"LOWER": "software"}, {"LOWER": "programmer"}]'),
+    ],
+    "Senior Software Engineer": [
+        ("senior software engineer", '[{"LOWER": "senior"}, {"LOWER": "software"}, {"LOWER": "engineer"}]'),
+        ("sr. software engineer", '[{"LOWER": "sr."}, {"LOWER": "software"}, {"LOWER": "engineer"}]'),
+        ("sr software engineer", '[{"LOWER": "sr"}, {"LOWER": "software"}, {"LOWER": "engineer"}]'),
+        ("senior software developer", '[{"LOWER": "senior"}, {"LOWER": "software"}, {"LOWER": "developer"}]'),
+        ("sr. software developer", '[{"LOWER": "sr."}, {"LOWER": "software"}, {"LOWER": "developer"}]'),
+        ("sr software developer", '[{"LOWER": "sr"}, {"LOWER": "software"}, {"LOWER": "developer"}]'),
+        ("senior engineer", '[{"LOWER": "senior"}, {"LOWER": "engineer"}]'),
+        ("sr. engineer", '[{"LOWER": "sr."}, {"LOWER": "engineer"}]'),
+        ("sr engineer", '[{"LOWER": "sr"}, {"LOWER": "engineer"}]'),
+        ("senior developer", '[{"LOWER": "senior"}, {"LOWER": "developer"}]'),
+        ("sr. developer", '[{"LOWER": "sr."}, {"LOWER": "developer"}]'),
+        ("sr developer", '[{"LOWER": "sr"}, {"LOWER": "developer"}]'),
+        ("senior programmer", '[{"LOWER": "senior"}, {"LOWER": "programmer"}]'),
+        ("sr. programmer", '[{"LOWER": "sr."}, {"LOWER": "programmer"}]'),
+        ("sr programmer", '[{"LOWER": "sr"}, {"LOWER": "programmer"}]'),
+        ("software engineer III", '[{"LOWER": "software"}, {"LOWER": "engineer"}, {"LOWER": "iii"}]'),
+        ("software engineer IV", '[{"LOWER": "software"}, {"LOWER": "engineer"}, {"LOWER": "iv"}]'),
+        ("senior systems engineer", '[{"LOWER": "senior"}, {"LOWER": "systems"}, {"LOWER": "engineer"}]'),
+        ("senior system engineer", '[{"LOWER": "senior"}, {"LOWER": "system"}, {"LOWER": "engineer"}]'),
+        ("senior application developer", '[{"LOWER": "senior"}, {"LOWER": "application"}, {"LOWER": "developer"}]'),
+        ("senior programmer analyst", '[{"LOWER": "senior"}, {"LOWER": "programmer"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "analyst"}]')
+    ]
+}
