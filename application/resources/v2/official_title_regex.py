@@ -1,6 +1,7 @@
 official_title_regex = {
     "Software Engineer": [
-        "\w+\s+software\s+engineer\s+\w+", 
+        "\w+\s+software\s+engineer\s+\w+",
+        "\w+\s+software\s+engineer", 
         "\w+\s+software\s+developer",
         "\w+\s+programmer\s+developer",
         "\w+\s+software\s+development\s+engineer",
