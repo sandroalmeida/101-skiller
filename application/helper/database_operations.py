@@ -47,3 +47,29 @@ class DatabaseOperations:
         else:
             print("No database connection.")
             return None
+    
+    def fetch_titles(self):
+        if self.cursor is not None:
+            try:
+                query = "SELECT title_id, title_description, alias, regex FROM title_view"
+                self.cursor.execute(query)
+                return self.cursor.fetchall()
+            except Error as e:
+                print(f"Error executing query: {e}")
+                return None
+        else:
+            print("No database connection.")
+            return None
+        
+    def fetch_title_patterns(self):
+        if self.cursor is not None:
+            try:
+                query = "SELECT name, pattern, title_id FROM title_pattern"
+                self.cursor.execute(query)
+                return self.cursor.fetchall()
+            except Error as e:
+                print(f"Error executing query: {e}")
+                return None
+        else:
+            print("No database connection.")
+            return None
