@@ -1,4 +1,4 @@
-skill_patterns = {
+title_patterns = {
     "Software Engineer": [
         ("software engineer", '[{"LOWER": {"NOT_IN": ["senior", "sr", "sr."]} }, {"LOWER": "software"}, {"LOWER": "engineer"}, {"LOWER": {"NOT_IN": ["III", "IV"]} }]'),
         ("software developer", '[{"LOWER": {"NOT_IN": ["senior", "sr", "sr."]} }, {"LOWER": "software"}, {"LOWER": "developer"}]'),

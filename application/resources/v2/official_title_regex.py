@@ -1,4 +1,4 @@
-official_skill_regex = {
+official_title_regex = {
     "Software Engineer": [
         "\w+\s+software\s+engineer\s+\w+", 
         "\w+\s+software\s+developer",
