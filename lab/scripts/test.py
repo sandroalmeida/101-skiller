@@ -10,14 +10,12 @@ import os
 # sys.path.append(resources_path)
 
 regex_test = [
-        "(\w+\s+)?((software|programmer|application|system|systems|computer)\s+(engineer|developer|programmer))(\s+\w+)?",
-        "(\w+\s+)?software\s+development\s+engineer(\s+\w+)?",
-        "(\w+\s+)?programmer\s+analyst(\s+\w+)?",
+        "(senior|sr.|sr)\s+(software|programmer|application|system|systems|computer)\s+(engineer|developer|programmer)",
     ]
-test_string = "xxx programmer developer test"
+test_string = "senior software engineer"
 
 for regex in regex_test:
-    if re.search(regex, test_string):
+    if re.match(regex, test_string.lower(), re.IGNORECASE):
         print(regex)
         print(re.search(regex, test_string))
 

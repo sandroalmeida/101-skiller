@@ -35,7 +35,6 @@ def extract_titles(resume_text):
 
     # Add each title pattern to the matcher object using a loop
     for pattern_name, pattern, title_id in title_patterns:
-        print(pattern_name)
         matcher.add(pattern_name, [json.loads(pattern)])
 
     # Find all matches of the pattern in the doc
@@ -46,12 +45,8 @@ def extract_titles(resume_text):
     not_official_title_list = set()
     for match_id, start, end in matches:
         match_text = doc[start:end].text
-
-        for title_id, title_description, alias, regex in titles:
-            if (
-                (alias is not None and alias.lower() == match_text.lower()) or
-                (regex is not None and re.match(regex, match_text.lower(), re.IGNORECASE))
-            ):
+        for title_id, title_description, regex in titles:
+            if (regex is not None and re.match(regex, match_text.lower(), re.IGNORECASE)):
                 official_title_list.add(title_id + ' - ' + title_description)
                 break
         else:

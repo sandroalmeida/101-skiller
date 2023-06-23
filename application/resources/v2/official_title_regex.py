@@ -19,7 +19,7 @@ official_title_regex = {
         "software\s+engineer\s+i",
     ],
     "Software Engineer": [
-        "(\w+\s+)?((software|programmer|application|system|systems|computer)\s+(engineer|developer|programmer))(\s+\w+)?"
+        "(\w+\s+)?((software|programmer|application|system|systems|computer)\s+(engineer|developer|programmer))(\s+\w+)?",
         "(\w+\s+)?software\s+development\s+engineer(\s+\w+)?",
         "(\w+\s+)?programmer\s+analyst(\s+\w+)?",
         "(\w+\s+)?programmer\/analyst(\s+\w+)?",
@@ -27,7 +27,7 @@ official_title_regex = {
         "(engineer|developer|programmer|software|technical)\s+(contractor|consultant|associate)",
     ],
     "Senior Software Engineer": [
-        "(senior|sr.|sr)\s+(software|programmer|application|system|systems|computer)\s+(engineer|developer|programmer)"
+        "(senior|sr.|sr)\s+(software|programmer|application|system|systems|computer)\s+(engineer|developer|programmer)",
         "(senior|sr.|sr)\s+software\s+development\s+engineer",
         "(senior|sr.|sr)\s+programmer\s+analyst",
         "(senior|sr.|sr)\s+programmer\/analyst",
@@ -35,21 +35,21 @@ official_title_regex = {
         "(senior|sr.|sr)\s+(engineer|developer|programmer)",
     ],
     "Staff Software Engineer": [
-        "staff\s+(software|programmer|application|system|systems|computer)\s+(engineer|developer|programmer)"
+        "staff\s+(software|programmer|application|system|systems|computer)\s+(engineer|developer|programmer)",
         "staff\s+software\s+development\s+engineer",
         "staff\s+programmer\s+analyst",
         "staff\s+programmer\/analyst",
         "staff\s+(engineer|developer|programmer)",
     ],
     "Principal Software Engineer": [
-        "principal\s+(software|programmer|application|system|systems|computer)\s+(engineer|developer|programmer)"
+        "principal\s+(software|programmer|application|system|systems|computer)\s+(engineer|developer|programmer)",
         "principal\s+software\s+development\s+engineer",
         "principal\s+programmer\s+analyst",
         "principal\s+programmer\/analyst",
         "principal\s+(engineer|developer|programmer)",
     ],
     "Lead Software Engineer": [
-        "lead\s+(software|programmer|application|system|systems|computer)\s+(engineer|developer|programmer)"
+        "lead\s+(software|programmer|application|system|systems|computer)\s+(engineer|developer|programmer)",
         "lead\s+software\s+development\s+engineer",
         "lead\s+programmer\s+analyst",
         "lead\s+programmer\/analyst",

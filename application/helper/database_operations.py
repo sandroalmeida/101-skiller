@@ -51,7 +51,7 @@ class DatabaseOperations:
     def fetch_titles(self):
         if self.cursor is not None:
             try:
-                query = "SELECT title_id, title_description, alias, regex FROM title_view"
+                query = "SELECT title_id, title_description, regex FROM title_view"
                 self.cursor.execute(query)
                 return self.cursor.fetchall()
             except Error as e:
