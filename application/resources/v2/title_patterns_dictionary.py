@@ -1,7 +1,7 @@
 title_patterns = {
     "Software Engineer Intern": [
         ("software development engineer intern", '[{"LOWER": "software"}, {"LOWER": "development"}, {"LOWER": "engineer"}, {"LOWER": {"IN": ["intern", "internship"]} }]'),
-        ("programmer analyst", '[{"LOWER": "programmer"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "analyst"}, {"LOWER": {"IN": ["intern", "internship"]} }]'),
+        ("programmer analyst intern", '[{"LOWER": "programmer"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "analyst"}, {"LOWER": {"IN": ["intern", "internship"]} }]'),
         ("engineer intern", '[{"LOWER": {"IN": ["engineer", "developer", "programmer"]} }, {"LOWER": {"IN": ["intern", "internship"]} }]'),
     ],
     "Junior Software Engineer": [
@@ -13,9 +13,9 @@ title_patterns = {
     "Intermediate Software Engineer": [
         ("intermediate software engineer", '[{"LOWER": "intermediate"}, {"LOWER": {"IN": ["software", "programmer", "application", "system", "systems", "computer"]} }, {"LOWER": {"IN": ["engineer", "developer", "programmer"]} }]'),
         ("intermediate software development engineer", '[{"LOWER": "intermediate"}, {"LOWER": "software"}, {"LOWER": "development"}, {"LOWER": "engineer"}]'),
-        ("intermediate programmer analyst", '[{"LOWER": {"IN": ["junior", "jr.", "jr"]} }, {"LOWER": "programmer"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "analyst"}]'),
+        ("intermediate programmer analyst", '[{"LOWER": "intermediate"}, {"LOWER": "programmer"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "analyst"}]'),
         ("software engineer I", '[{"LOWER": "software"}, {"LOWER": {"IN": ["engineer", "developer"]} }, {"LOWER": "i"}]'),
-        ("intermediate engineer", '[{"LOWER": "intermediate"} }, {"LOWER": {"IN": ["engineer", "developer", "programmer"]} }]'),
+        ("intermediate engineer", '[{"LOWER": "intermediate"}, {"LOWER": {"IN": ["engineer", "developer", "programmer"]} }]'),
     ],
     "Software Engineer": [
         ("software engineer", '[{"LOWER": {"NOT_IN": ["lead", "principal", "staff", "senior", "sr.", "sr", "intermediate", "junior", "jr.", "jr"]} }, {"LOWER": {"IN": ["software", "programmer", "application", "system", "systems", "computer"]} }, {"LOWER": {"IN": ["engineer", "developer", "programmer"]} }, {"LOWER": {"NOT_IN": ["i", "iii", "iv", "intern", "internship", "manager"]} }]'),
@@ -49,10 +49,6 @@ title_patterns = {
         ("lead programmer analyst", '[{"LOWER": "lead"}, {"LOWER": "programmer"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "analyst"}]'),
         ("lead engineer", '[{"LOWER": "lead"}, {"LOWER": {"IN": ["engineer", "developer", "programmer"]} }]'),
         ("technical lead", '[{"LOWER": {"IN": ["technical", "tech"]} }, {"LOWER": "lead"}]'),
-    ],
-    "Software Engineer Consultant": [
-        ("engineer consultant", '[{"LOWER": {"IN": ["engineer", "developer", "software", "technical"]} }, {"LOWER": {"IN": ["consultant", "contractor", "associate"]} }]'),
-        ("consultant engineer", '[{"LOWER": {"IN": ["consultant", "contractor", "associate"]} }, {"LOWER": {"IN": ["engineer", "developer"]} }]'),
     ],
     "Software Engineering Manager": [
         ("engineer manager", '[{"LOWER": {"IN": ["engineer", "engineering", "developer", "development", "program"]} }, {"LOWER": "manager"}]'),

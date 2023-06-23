@@ -35,6 +35,7 @@ def extract_titles(resume_text):
 
     # Add each title pattern to the matcher object using a loop
     for pattern_name, pattern, title_id in title_patterns:
+        print(pattern_name)
         matcher.add(pattern_name, [json.loads(pattern)])
 
     # Find all matches of the pattern in the doc

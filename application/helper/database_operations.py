@@ -73,3 +73,16 @@ class DatabaseOperations:
         else:
             print("No database connection.")
             return None
+        
+    def title_pattern_exists(self, pattern):
+        if self.cursor is not None:
+            try:
+                query = "SELECT COUNT(*) FROM title_pattern WHERE pattern = %s"
+                self.cursor.execute(query, (pattern,))
+                return self.cursor.fetchone()[0] > 0
+            except Error as e:
+                print(f"Error executing query: {e}")
+                return None
+        else:
+            print("No database connection.")
+            return None
