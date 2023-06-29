@@ -1,8 +1,6 @@
 skill_patterns = {
     "Java": [
-        ("java", '[{"LOWER": "java"}]'),
-        ("jee", '[{"LOWER": "jee"}]'),
-        ("j2ee", '[{"LOWER": "j2ee"}]'),
+        ("java", '[{"LOWER": {"IN": ["java", "jee", "j2ee"]} }]'),
     ],
     "Python": [
         ("python", '[{"LOWER": "python"}]'),
@@ -14,16 +12,13 @@ skill_patterns = {
     ],
     "Objective-C": [ 
         ("objective-c", '[{"LOWER": "objective"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "c"}]'),
-        ("objectivec", '[{"LOWER": "objectivec"}]'),
-        ("objective.c", '[{"LOWER": "objective.c"}]'),
+        ("objectivec", '[{"LOWER": {"IN": ["objectivec", "objective.c"]} }]'),
     ],
     "Golang": [
         ("go", '[{"IS_TITLE": true, "LOWER": "go"}]'),
         ("golang", '[{"LOWER": "golang"}]'),
-        ("go programming", '[{"LOWER": "go"}, {"LOWER": "programming"}]'),
-        ("go (programming", '[{"LOWER": "go"}, {"LOWER": "("}, {"LOWER": "programming"}]'),
-        ("go language", '[{"LOWER": "go"}, {"LOWER": "language"}]'),
-        ("go (language", '[{"LOWER": "go"}, {"LOWER": "("}, {"LOWER": "language"}]'),
+        ("go programming", '[{"LOWER": "go"}, {"LOWER": {"IN": ["programming", "language"]} }]'),
+        ("go (programming", '[{"LOWER": "go"}, {"LOWER": "("}, , {"LOWER": {"IN": ["programming", "language"]} }]'),
     ],
     "Kotlin": [
         ("kotlin", '[{"LOWER": "kotlin"}]'),
@@ -32,23 +27,18 @@ skill_patterns = {
         ("rust", '[{"LOWER": "rust"}]'),
     ],
     "VB.Net": [ 
-        ("vb.net", '[{"LOWER": "vb.net"}]'),
-        ("visual basic", '[{"LOWER": "visual"}, {"LOWER": "basic"}]'),
-        ("vb", '[{"LOWER": "vb"}]'),
-        ("vb .net", '[{"LOWER": "vb"}, {"LOWER": ".net"}]'),
-        ("vb net", '[{"LOWER": "vb"}, {"LOWER": "net"}]'),
-        ("vbnet", '[{"LOWER": "vbnet"}]'),
+        ("vb.net", '[{"LOWER": {"IN": "vb.net", "vbnet"} }]'),
+        ("visual basic .net", '[{"LOWER": "visual"}, {"LOWER": "basic"}, {"LOWER": {"IN": ["net", ".net", "dotnet"]} }]'),
+        ("vb .net", '[{"LOWER": {"IN": "vb", "visual"} }, {"LOWER": {"IN": ["net", ".net", "dotnet"]} }]'),
     ],
     "ASP.Net": [ 
-        ("asp.net", '[{"LOWER": "asp.net"}]'),
-        ("aspnet", '[{"LOWER": "aspnet"}]'),
-        ("asp .net", '[{"LOWER": "asp"}, {"LOWER": ".net"}]'),
-        ("asp net", '[{"LOWER": "asp"}, {"LOWER": "net"}]'),
+        ("asp.net", '[{"LOWER": {"IN": "asp.net", "aspnet"} }]'),
+        ("asp .net", '[{"LOWER": "asp"}, {"LOWER": {"IN": ["net", ".net", "dotnet"]} }]'),
     ],
     "Bash": [
         ("bash", '[{"LOWER": "bash"}]'),
     ],
-    "Visual Basic": [
+    "Visual Basic 6": [
         ("visual basic 6", '[{"LOWER": "visual"}, {"LOWER": "basic"}, {"LOWER": "6"}]'),
         ("vb6", '[{"LOWER": "vb6"}]'),
         ("vb 6", '[{"LOWER": "vb"}, {"LOWER": "6"}]'),
@@ -62,20 +52,17 @@ skill_patterns = {
         ("c + +", '[{"LOWER": "c"}, {"LOWER": "+"}, {"LOWER": "+"}]'),
     ],
     "CSS": [
-        ("css", '[{"LOWER": "css"}]'),
-        ("css3", '[{"LOWER": "css3"}]'),
+        ("css", '[{"LOWER": {"IN": ["css", "css3]} }]'),
     ],
     "GraphQL": [
         ("graphql", '[{"LOWER": "graphql"}]'),
     ],
     "HTML": [
-        ("html", '[{"LOWER": "html"}]'),
-        ("html5", '[{"LOWER": "html5"}]'),
+        ("html", '[{"LOWER": {"IN": ["html", "html5"]} }]'),
     ],
     "Javascript": [
         ("javascript", '[{"LOWER": "javascript"}]'),
         ("java script", '[{"LOWER": "java"}, {"LOWER": "script"}]'),
-        ("js", '[{"LOWER": "js"}]'),
     ],
     "Language Integrated Query (LINQ)": [
         ("linq", '[{"LOWER": "linq"}]'),
@@ -86,33 +73,31 @@ skill_patterns = {
         ("mat lab", '[{"LOWER": "mat"}, {"LOWER": "lab"}]'),
     ],
     "NodeJS": [
-        ("nodejs", '[{"LOWER": "nodejs"}]'),
-        ("node.js", '[{"LOWER": "node.js"}]'),
-        ("node js", '[{"LOWER": "node"}, {"LOWER": "js"}]'),
+        ("nodejs", '[{"LOWER": {"IN": ["nodejs", "node.js"]} }]'),
+        ("node js", '[{"LOWER": "node"}, {"LOWER": {"IN": [".js", "js"]} }]'),
     ],
     "Perl": [
         ("Perl", '[{"LOWER": "perl"}]'),
     ],
     "PHP": [
-        ("PHP", '[{"LOWER": "php"}]'),
+        ("php", '[{"LOWER": "php"}]'),
     ],
     "Ruby": [
-        ("Ruby", '[{"LOWER": "ruby"}]'),
-        ("Rubyonrails", '[{"LOWER": "rubyonrails"}]'),
-        ("Ruby onrails", '[{"LOWER": "ruby"}, {"LOWER": "onrails"}]'),
-        ("Ruby on rails", '[{"LOWER": "ruby"}, {"LOWER": "on"}, {"LOWER": "rails"}]'),
+        ("ruby", '[{"LOWER": "ruby"}]'),
+        ("rubyonrails", '[{"LOWER": "rubyonrails"}]'),
     ],
     "Scala": [
-        ("Scala", '[{"LOWER": "scala"}]'),
+        ("scala", '[{"LOWER": "scala"}]'),
     ],
     "Shell": [
-        ("Shell", '[{"LOWER": "shell"}]'),
+        ("shell", '[{"LOWER": {"NOT_IN": ["power"]} }, {"LOWER": "shell"}]'),
     ],
     "Powershell": [
-        ("Powershell", '[{"LOWER": "powershell"}]'),
+        ("powershell", '[{"LOWER": "powershell"}]'),
+        ("power shell", '[{"LOWER": "power"}, {"LOWER": "shell"}]'),
     ],
     "Swift": [
-        ("Swift", '[{"LOWER": "swift"}]'),
+        ("swift", '[{"LOWER": "swift"}]'),
     ],
     "R": [
         ("r" , '[{"LOWER": "r"}, {"LOWER": {"NOT_IN": ["+"]} }]'),
@@ -127,10 +112,8 @@ skill_patterns = {
         ("plsql", '[{"LOWER": "plsql"}]'),
     ],
     "ADO.NET": [
-        ("ado.net", '[{"LOWER": "ado.net"}]'),
-        ("adonet", '[{"LOWER": "adonet"}]'),
-        ("ado net", '[{"LOWER": "ado"}, {"LOWER": "net"}]'),
-        ("ado .net", '[{"LOWER": "ado"}, {"LOWER": ".net"}]'),
+        ("ado.net", '[{"LOWER": {"IN": ["ado.net", "adonet"]} }]'),
+        ("ado net", '[{"LOWER": "ado"}, {"LOWER": {"IN": [".net", "net", "dotnet"]} }]'),
     ],
     "Asynchronous JavaScript And XML (AJAX)": [
         ("asynchronous javaScript and xml", '[{"LOWER": "asynchronous"}, {"LOWER": "javascript"}, {"LOWER": "and"}, {"LOWER": "xml"}]'),
@@ -141,8 +124,7 @@ skill_patterns = {
         ("angular2", '[{"LOWER": "angular2"}]'),
     ],
     "Angular.JS": [
-        ("angularjs", '[{"LOWER": "angularjs"}]'),
-        ("angular.js", '[{"LOWER": "angular.js"}]'),
+        ("angularjs", '[{"LOWER": {"IN": ["angularjs", "angular.js"]} }]'),
     ],
     "Apache Spark": [
         ("spark", '[{"LOWER": "spark"}]'),
@@ -162,9 +144,7 @@ skill_patterns = {
         ("entity framework", '[{"LOWER": "entity"}, {"LOWER": "framework"}]'),
     ],
     "Express.JS": [
-        ("express.js", '[{"LOWER": "express.js"}]'),
-        ("expressjs", '[{"LOWER": "expressjs"}]'),
-        ("express", '[{"LOWER": "express"}]'),
+        ("express.js", '[{"LOWER": {"IN": ["express.js", "expressjs", "express"]} }]'),
     ],
     "Flask": [
         ("flask", '[{"LOWER": "flask"}]'),
@@ -192,17 +172,13 @@ skill_patterns = {
         ("open gl", '[{"LOWER": "open"}, {"LOWER": "gl"}]'),
     ],
     "React.JS": [
-        ("react", '[{"LOWER": "react"}]'),
-        ("reactjs", '[{"LOWER": "reactjs"}]'),
-        ("react.js", '[{"LOWER": "react.js"}]'),
+        ("react", '[{"LOWER": {"IN": ["react", "reactjs", "react.js"]} }]'),
     ],
     "React Native": [
         ("react native", '[{"LOWER": "react"}, {"LOWER": "native"}]'),
     ],
     "Redux": [
-        ("redux", '[{"LOWER": "redux"}]'),
-        ("reduxjs", '[{"LOWER": "reduxjs"}]'),
-        ("redux.js", '[{"LOWER": "redux.js"}]'),
+        ("redux", '[{"LOWER": {"IN": ["redux", "reduxjs", "redux.js"]} }]'),
     ],
     "Selenium": [
         ("selenium", '[{"LOWER": "selenium"}]'),
@@ -235,10 +211,8 @@ skill_patterns = {
         ("unity3D", '[{"LOWER": "unity3D"}]'),
     ],
     "Vue.JS": [
-        ("vue.js", '[{"LOWER": "vue.js"}]'),
-        ("vuejs", '[{"LOWER": "vuejs"}]'),
-        ("vue js", '[{"LOWER": "vue"}, {"LOWER": "js"}]'),
-        ("vue .js", '[{"LOWER": "vue"}, {"LOWER": ".js"}]'),
+        ("vue.js", '[{"LOWER": {"IN": ["vue.js", "vuejs"]} }]'),
+        ("vue js", '[{"LOWER": "vue"}, {"LOWER": {"IN": [".js", "js"]} }]'),
     ],
     "Windows Communication Foundation (WCF)": [
         ("wcf", '[{"LOWER": "wcf"}]'),
@@ -272,10 +246,8 @@ skill_patterns = {
         ("mysql", '[{"LOWER": "mysql"}]'),
     ],
     "Oracle Database": [
-        ("oracle db", '[{"LOWER": "oracle"}, {"LOWER": "db"}]'),
+        ("oracle db", '[{"LOWER": "oracle"}, {"LOWER": {"IN": ["db", "database", "sql"]} }]'),
         ("oracledb", '[{"LOWER": "oracledb"}]'),
-        ("oracle database", '[{"LOWER": "oracle"}, {"LOWER": "database"}]'),
-        ("oracle sql", '[{"LOWER": "oracle"}, {"LOWER": "sql"}]'),
     ],
     "PostgreSQL": [
         ("postgresql", '[{"LOWER": "postgresql"}]'),
@@ -287,9 +259,8 @@ skill_patterns = {
         ("sqlite", '[{"LOWER": "sqlite"}]'),
     ],
     "MariaDB": [
-        ("mariadb", '[{"LOWER": "mariadb"}]'),
-        ("maria db", '[{"LOWER": "maria"}, {"LOWER": "db"}]'),
-        ("mariadatabase", '[{"LOWER": "mariadatabase"}]'),
+        ("mariadb", '[{"LOWER": {"IN": ["mariadb", "mariadatabase"]} }]'),
+        ("maria db", '[{"LOWER": "maria"}, {"LOWER": {"IN": ["db", "database"]} }]'),
     ],
     "IBM Informix": [
         ("informix", '[{"LOWER": "informix"}]'),
@@ -308,8 +279,7 @@ skill_patterns = {
     ],
     "CockroachDB": [
         ("cockroachdb", '[{"LOWER": "cockroachdb"}]'),
-        ("cockroach db", '[{"LOWER": "cockroach"}, {"LOWER": "db"}]'),
-        ("cockroach database", '[{"LOWER": "cockroach"}, {"LOWER": "database"}]'),
+        ("cockroach db", '[{"LOWER": "cockroach"}, {"LOWER": {"IN": ["db", "database"]} }]'),
     ],
     "Microsoft Access": [
         ("microsoft access", '[{"LOWER": "microsoft"}, {"LOWER": "access"}]'),
@@ -323,8 +293,7 @@ skill_patterns = {
     ],
     "Apache CouchDB": [
         ("couchdb", '[{"LOWER": "couchdb"}]'),
-        ("couch db", '[{"LOWER": "couch"}, {"LOWER": "db"}]'),
-        ("couch database", '[{"LOWER": "couch"}, {"LOWER": "database"}]'),
+        ("couch db", '[{"LOWER": "couch"}, {"LOWER": {"IN": ["db", "database"]} }]'),
     ],
     "Apache HBase": [
         ("hbase", '[{"LOWER": "hbase"}]'),
@@ -334,8 +303,7 @@ skill_patterns = {
     ],
     "ArangoDB": [
         ("arangodb", '[{"LOWER": "arangodb"}]'),
-        ("arango db", '[{"LOWER": "arango"}, {"LOWER": "db"}]'),
-        ("arango database", '[{"LOWER": "arango"}, {"LOWER": "database"}]'),
+        ("arango db", '[{"LOWER": "arango"}, {"LOWER": {"IN": ["db", "database"]} }]'),
     ],
     "Aerospike": [
         ("aerospike", '[{"LOWER": "aerospike"}]'),
@@ -354,8 +322,7 @@ skill_patterns = {
     ],
     "FaunaDB": [
         ("faunadb", '[{"LOWER": "faunadb"}]'),
-        ("fauna db", '[{"LOWER": "fauna"}, {"LOWER": "db"}]'),
-        ("fauna database", '[{"LOWER": "fauna"}, {"LOWER": "database"}]'),
+        ("fauna db", '[{"LOWER": "fauna"}, {"LOWER": {"IN": ["db", "database"]} }]'),
     ],
     "Apache Ignite": [
         ("ignite", '[{"LOWER": "ignite"}]'),
@@ -365,8 +332,7 @@ skill_patterns = {
     ],
     "VoltDB": [
         ("voltdb", '[{"LOWER": "voltdb"}]'),
-        ("volt db", '[{"LOWER": "volt"}, {"LOWER": "db"}]'),
-        ("volt database", '[{"LOWER": "volt"}, {"LOWER": "database"}]'),
+        ("volt db", '[{"LOWER": "volt"}, {"LOWER": {"IN": ["db", "database"]} }]'),
     ],
     "MemSQL": [
         ("memsql", '[{"LOWER": "memsql"}]'),
@@ -385,7 +351,7 @@ skill_patterns = {
         ("kafka", '[{"LOWER": "kafka"}]'),
     ],
     "Rational ClearCase": [
-        ("clearcase", '[{"LOWER": "clearcase"}, {"LOWER": "clear"}, {"LOWER": "case"}]'),
+        ("clearcase", '[{"LOWER": "clearcase"}]'),
         ("clear case", '[{"LOWER": "clear"}, {"LOWER": "case"}]'),
     ],
     "Confluence": [
@@ -447,7 +413,7 @@ skill_patterns = {
     "Linux": [
         ("linux", '[{"LOWER": "linux"}]'),
         ("ubuntu", '[{"LOWER": "ubuntu"}]'),
-        ("red hat", '[{"LOWER": "red"}, {"LOWER": "hat"}]'),
+        ("red hat", '[{"LOWER": "red"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "hat"}]'),
         ("redhat", '[{"LOWER": "redhat"}]'),
         ("centos", '[{"LOWER": "centos"}]'),
         ("debian", '[{"LOWER": "debian"}]'),
@@ -462,30 +428,31 @@ skill_patterns = {
         ("excel", '[{"LOWER": "excel"}]'),
     ],
     "Microsoft Office": [
-        ("microsoft office", '[{"LOWER": "microsoft"}, {"LOWER": "office"}]'),
-        ("ms office", '[{"LOWER": "ms"}, {"LOWER": "office"}]'),
+        ("microsoft office", '[{"LOWER": {"IN": ["microsoft", "ms"]} }, {"LOWER": "office"}]'),
         ("msoffice", '[{"LOWER": "msoffice"}]'),
     ],
     "Microsoft PowerPoint": [
         ("powerpoint", '[{"LOWER": "powerpoint"}]'),
+        ("power point", '[{"LOWER": "power"}, {"LOWER": "point"}]'),
     ],
     "Microsoft Word": [
         ("microsoft word", '[{"LOWER": "microsoft"}, {"LOWER": "word"}]'),
     ],
     "Microsoft Project": [
-        ("ms project", '[{"LOWER": "ms"}, {"LOWER": "project"}]'),
+        ("ms project", '[{"LOWER": {"IN": ["microsoft", "ms"]} }, {"LOWER": "project"}]'),
         ("msproject", '[{"LOWER": "msproject"}]'),
-        ("microsoft project", '[{"LOWER": "microsoft"}, {"LOWER": "project"}]'),
     ],
     "Perforce": [
         ("perforce", '[{"LOWER": "perforce"}]'),
     ],
     "Salesforce": [
         ("salesforce", '[{"LOWER": "salesforce"}]'),
-        ("salesforce.com", '[{"LOWER": "salesforce"}, {"ORTH": "."}, {"LOWER": "com"}]'),
+        ("salesforce.com", '[{"LOWER": "salesforce.com"}]'),
+        ("sales force", '[{"LOWER": "sales"}, {"LOWER": "force"}]'),
     ],
     "Microsoft SharePoint": [
         ("sharepoint", '[{"LOWER": "sharepoint"}]'),
+        ("share point", '[{"LOWER": "share"}, {"LOWER": "point"}]'),
     ],
     "Solaris": [
         ("solaris", '[{"LOWER": "solaris"}]'),
@@ -526,9 +493,8 @@ skill_patterns = {
         ("weblogic", '[{"LOWER": "weblogic"}]'),
     ],
     "Microsoft Windows": [
-        ("microsoft windows", '[{"LOWER": "microsoft"}, {"LOWER": "windows"}]'),
-        ("ms windows", '[{"LOWER": "ms"}, {"LOWER": "windows"}]'),
-        ("windows 7", '[{"LOWER": "windows"}, {"LOWER": "7"}]'),
+        ("microsoft windows", '[{"LOWER": {"IN": ["microsoft", "ms"]} }, {"LOWER": "windows"}]'),
+        ("windows 7", '[{"LOWER": "windows"}, {"LIKE_NUM": true}]'),
     ],
     "Microsoft Windows Server": [
         ("windows server", '[{"LOWER": "windows"}, {"LOWER": "server"}]'),
@@ -544,7 +510,7 @@ skill_patterns = {
     "Agile Methodologies": [
         ("agile", '[{"LOWER": "agile"}]'),
     ],
-    "Algorithms": [
+    "Algorithms Programming": [
         ("algorithm", '[{"LOWER": "algorithm"}]'),
         ("algorithms", '[{"LOWER": "algorithms"}]'),
     ],
@@ -566,17 +532,11 @@ skill_patterns = {
         ("api development", '[{"LOWER": "api"}, {"LOWER": "development"}]'),
     ],
      "Software Development": [
-        ("application development", '[{"LOWER": "application"}, {"LOWER": "development"}]'),
-        ("software development", '[{"LOWER": "software"}, {"LOWER": "development"}]'),
-        ("product development", '[{"LOWER": "product"}, {"LOWER": "development"}]'),
+        ("application development", '[{"LOWER": {"IN": ["application", "software", "product"]} }, {"LOWER": "development"}]'),
     ],
     "Software Architecture": [
-        ("software architecture", '[{"LOWER": "software"}, {"LOWER": "architecture"}]'),
-        ("solution architecture", '[{"LOWER": "solution"}, {"LOWER": "architecture"}]'),
-        ("system architecture", '[{"LOWER": "system"}, {"LOWER": "architecture"}]'),
-        ("application architecture", '[{"LOWER": "application"}, {"LOWER": "architecture"}]'),
-        ("architectural design", '[{"LOWER": "architectural"}, {"LOWER": "design"}]'),
-        ("architecture design", '[{"LOWER": "architecture"}, {"LOWER": "design"}]'),
+        ("software architecture", '[{"LOWER": {"IN": ["application", "software", "system", "solution"]} }, {"LOWER": "architecture"}]'),
+        ("architectural design", '[{"LOWER": {"IN": ["architectural", "architecture"]} }, {"LOWER": "design"}]'),
     ],
     "Artificial Intelligence (AI)": [
         ("ai", '[{"LOWER": "ai"}]'),
@@ -591,7 +551,7 @@ skill_patterns = {
     ],
     "Big Data": [
         ("bigdata", '[{"LOWER": "bigdata"}]'),
-        ("big data", '[{"LOWER": "big"}, {"LOWER": "data"}]'),
+        ("big data", '[{"LOWER": "big"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "data"}]'),
     ],
     "Business Analysis": [
         ("business analysis", '[{"LOWER": "business"}, {"LOWER": "analysis"}]'),
@@ -618,8 +578,7 @@ skill_patterns = {
         ("data science", '[{"LOWER": "data"}, {"LOWER": "science"}]'),
     ],
     "Data Structures": [
-        ("data structures", '[{"LOWER": "data"}, {"LOWER": "structures"}]'),
-        ("data structure", '[{"LOWER": "data"}, {"LOWER": "structure"}]'),
+        ("data structures", '[{"LOWER": "data"}, {"LOWER": {"IN": ["structures", "structure"]}}]'),
     ],
     "Data Visualization": [
         ("data visualization", '[{"LOWER": "data"}, {"LOWER": "visualization"}]'),
@@ -640,8 +599,7 @@ skill_patterns = {
         ("deep learning", '[{"LOWER": "deep"}, {"LOWER": "learning"}]'),
     ],
     "Design Patterns": [
-        ("design patterns", '[{"LOWER": "design"}, {"LOWER": "patterns"}]'),
-        ("design pattern", '[{"LOWER": "design"}, {"LOWER": "pattern"}]'),
+        ("design patterns", '[{"LOWER": "design"}, {"LOWER": {"IN": ["patterns", "pattern"]} }]'),
     ],
     "DevOps": [
         ("devops", '[{"LOWER": "devops"}]'),
@@ -650,12 +608,10 @@ skill_patterns = {
         ("disaster recovery", '[{"LOWER": "disaster"}, {"LOWER": "recovery"}]'),
     ],
     "Distributed Systems": [
-        ("distributed systems", '[{"LOWER": "distributed"}, {"LOWER": "systems"}]'),
-        ("distributed system", '[{"LOWER": "distributed"}, {"LOWER": "system"}]'),
+        ("distributed systems", '[{"LOWER": "distributed"}, {"LOWER": {"IN": ["system", "systems"]} }]'),
     ],
     "Engineering/Development Management": [
-        ("engineering management", '[{"LOWER": "engineering"}, {"LOWER": "management"}]'),
-        ("development management", '[{"LOWER": "development"}, {"LOWER": "management"}]'),
+        ("engineering management", '[{"LOWER": {"IN": ["engineering", "development"]} }, {"LOWER": "management"}]'),
     ],
     "Enterprise Architecture": [
         ("enterprise architecture", '[{"LOWER": "enterprise"}, {"LOWER": "architecture"}]'),
@@ -700,13 +656,10 @@ skill_patterns = {
         ("machine learning", '[{"LOWER": "machine"}, {"LOWER": "learning"}]'),
     ],
     "Microservices": [
-        ("microservices", '[{"LOWER": "microservices"}]'),
-        ("microservice", '[{"LOWER": "microservice"}]'),
+        ("microservices", '[{"LOWER": {"IN": ["microservices", "microservice"]} }]'),
     ],
        "Mobile Development": [
-        ("mobile development", '[{"LOWER": "mobile"}, {"LOWER": "development"}]'),
-        ("mobile application development", '[{"LOWER": "mobile"}, {"LOWER": "application"}, {"LOWER": "development"}]'),
-        ("mobile applications development", '[{"LOWER": "mobile"}, {"LOWER": "applications"}, {"LOWER": "development"}]'),
+        ("mobile application development", '[{"LOWER": "mobile"}, {"LOWER": {"IN": ["application", "applications"]}, "OP": "?"}, {"LOWER": "development"}]'),
     ],
     "Multithreading": [
         ("multithreading", '[{"LOWER": "multithreading"}]'),
@@ -732,8 +685,7 @@ skill_patterns = {
         ("os x", '[{"LOWER": "os"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "x"}]'),
     ],
     "Product Management": [
-        ("product management", '[{"LOWER": "product"}, {"LOWER": "management"}]'),
-        ("program management", '[{"LOWER": "program"}, {"LOWER": "management"}]'),
+        ("product management", '[{"LOWER": {"IN": ["product", "program"]} }, {"LOWER": "management"}]'),
     ],
     "Project Management": [
         ("project management", '[{"LOWER": "project"}, {"LOWER": "management"}]'),
@@ -745,23 +697,18 @@ skill_patterns = {
         ("relational databases", '[{"LOWER": "relational"}, {"LOWER": "databases"}]'),
     ],
     "REST API WebServices": [
-        ("restful", '[{"LOWER": "restful"}]'),
-        ("rest", '[{"LOWER": "rest"}]'),
+        ("restful", '[{"LOWER": {"IN": ["restful", "rest"]} }]'),
         ("representational state transfer", '[{"LOWER": "representational"}, {"LOWER": "state"}, {"LOWER": "transfer"}]'),
     ],
     "Requirements Analysis": [
-        ("requirements analysis", '[{"LOWER": "requirements"}, {"LOWER": "analysis"}]'),
-        ("requirement analysis", '[{"LOWER": "requirement"}, {"LOWER": "analysis"}]'),
-        ("business requirements", '[{"LOWER": "business"}, {"LOWER": "requirements"}]'),
-        ("business requirement", '[{"LOWER": "business"}, {"LOWER": "requirement"}]'),
+        ("requirements analysis", '[{"LOWER": {"IN": ["requirements", "requirement"]} }, {"LOWER": "analysis"}]'),
+        ("business requirements", '[{"LOWER": "business"}, {"LOWER": {"IN": ["requirements", "requirement"]} }]'),
     ],
      "Requirements Gathering": [
-        ("requirements gathering", '[{"LOWER": "requirements"}, {"LOWER": "gathering"}]'),
-        ("requirement gathering", '[{"LOWER": "requirement"}, {"LOWER": "gathering"}]'),
+        ("requirements gathering", '[{"LOWER": {"IN": ["requirements", "requirement"]} }, {"LOWER": "gathering"}]'),
     ],
     "Robotics": [
-        ("robotics", '[{"LOWER": "robotics"}]'),
-        ("robotic", '[{"LOWER": "robotic"}]'),
+        ("robotics", '[{"LOWER": {"IN": ["robotics", "robotic"]} }]'),
     ],
     "Software as a Service (SASS)": [
         ("sofware as a service", '[{"LOWER": "sofware"}, {"LOWER": "as"}, {"LOWER": "a"}, {"LOWER": "service"}]'),
@@ -774,13 +721,8 @@ skill_patterns = {
         ("scrum", '[{"LOWER": "scrum"}]'),
     ],
     "Software Development Lifecycle (SDLC)": [
-        ("software development lifecycle", '[{"LOWER": "sofware"}, {"LOWER": "development"}, {"LOWER": "lifecycle"}]'),
-        ("software development life cycle", '[{"LOWER": "sofware"}, {"LOWER": "development"}, {"LOWER": "life"}, {"LOWER": "cycle"}]'),
-        ("software lifecycle", '[{"LOWER": "sofware"}, {"LOWER": "lifecycle"}]'),
-        ("software life cycle", '[{"LOWER": "sofware"}, {"LOWER": "life"}, {"LOWER": "cycle"}]'),
+        ("software development lifecycle", '[{"LOWER": {"IN": ["sofware", "application"]} }, {"LOWER": "development", "OP": "?"}, {"LOWER": {"IN": ["lifecycle", "life"]} }, {"LOWER": "cycle", "OP": "?"}]'),
         ("sdlc", '[{"LOWER": "sdlc"}]'),
-        ("application lifecycle", '[{"LOWER": "application"}, {"LOWER": "lifecycle"}]'),
-        ("application life cycle", '[{"LOWER": "application"}, {"LOWER": "life"}, {"LOWER": "cycle"}]'),
         ("alm", '[{"LOWER": "alm"}]'),
     ],
     "Search Engine Optimization (SEO)": [
@@ -798,18 +740,13 @@ skill_patterns = {
         ("software design", '[{"LOWER": "software"}, {"LOWER": "design"}]'),
     ],
     "Application Security": [
-        ("application security", '[{"LOWER": "application"}, {"LOWER": "security"}]'),
-        ("application vulnerabilities", '[{"LOWER": "application"}, {"LOWER": "vulnerabilities"}]'),
-        ("application vulnerability", '[{"LOWER": "application"}, {"LOWER": "vulnerability"}]'),
+        ("application security", '[{"LOWER": "application"}, {"LOWER": {"IN": ["security", "vulnerabilities", "vulnerability"]} }]'),
     ],
      "Software Documentation": [
-        ("software documentation", '[{"LOWER": "software"}, {"LOWER": "documentation"}]'),
-        ("technical documentation", '[{"LOWER": "technical"}, {"LOWER": "documentation"}]'),
+        ("software documentation", '[{"LOWER": {"IN": ["software", "technical"]} }, {"LOWER": "documentation"}]'),
     ],
      "Software Engineering": [
-        ("software engineering", '[{"LOWER": "software"}, {"LOWER": "engineering"}]'),
-        ("system engineering", '[{"LOWER": "system"}, {"LOWER": "engineering"}]'),
-        ("systems engineering", '[{"LOWER": "systems"}, {"LOWER": "engineering"}]'),
+        ("software engineering", '[{"LOWER": {"IN": ["software", "system", "systems"]} }, {"LOWER": "engineering"}]'),
     ],
     "Software Project Management": [
         ("software project management", '[{"LOWER": "software"}, {"LOWER": "project"}, {"LOWER": "management"}]'),
@@ -818,21 +755,11 @@ skill_patterns = {
         ("software quality assurance", '[{"LOWER": "software"}, {"LOWER": "quality"}, {"LOWER": "assurance"}]'),
     ],
     "Software Testing": [
-        ("software testing", '[{"LOWER": "software"}, {"LOWER": "testing"}]'),
-        ("regression testing", '[{"LOWER": "regression"}, {"LOWER": "testing"}]'),
-        ("test cases", '[{"LOWER": "test"}, {"LOWER": "cases"}]'),
-        ("test automation", '[{"LOWER": "test"}, {"LOWER": "automation"}]'),\
-        ("test planning", '[{"LOWER": "test"}, {"LOWER": "planning"}]'),
-        ("unit testing", '[{"LOWER": "unit"}, {"LOWER": "testing"}]'),
-        ("unit tests", '[{"LOWER": "unit"}, {"LOWER": "tests"}]'),
-        ("unit test", '[{"LOWER": "unit"}, {"LOWER": "test"}]'),
-        ("user acceptance testing", '[{"LOWER": "user"}, {"LOWER": "acceptance"}, {"LOWER": "testing"}]'),
-        ("manual testing", '[{"LOWER": "manual"}, {"LOWER": "testing"}]'),
-        ("manual test", '[{"LOWER": "manual"}, {"LOWER": "test"}]'),
-        ("api testing", '[{"LOWER": "api"}, {"LOWER": "testing"}]'),
-        ("black box testing", '[{"LOWER": "black"}, {"LOWER": "box"}, {"LOWER": "testing"}]'),
-        ("blackbox testing", '[{"LOWER": "blackbox"}, {"LOWER": "testing"}]'),
-        ("functional testing", '[{"LOWER": "functional"}, {"LOWER": "testing"}]'),
+        ("software testing", '[{"LOWER": {"IN": ["software", "regression", "blackbox", "functional", "unit", "manual", "api"]} }, {"LOWER": {"IN": ["testing", "test", "tests"]} }]'),
+        ("test cases", '[{"LOWER": {"IN": ["testing", "test", "tests"]} }, {"LOWER": {"IN": ["cases", "automation", "planning"]} }]'),
+        ("user acceptance testing", '[{"LOWER": "user"}, {"LOWER": "acceptance"}, {"LOWER": {"IN": ["testing", "test", "tests"]} }]'),
+        ("black box testing", '[{"LOWER": "black"}, {"LOWER": "box"}, {"LOWER": {"IN": ["testing", "test", "tests"]} }]'),
+
     ],
     "Team Management": [
         ("team management", '[{"LOWER": "team"}, {"LOWER": "management"}]'),
@@ -847,20 +774,15 @@ skill_patterns = {
         ("technical writing", '[{"LOWER": "technical"}, {"LOWER": "writing"}]'),
     ],
      "Web Development": [
-        ("web development", '[{"LOWER": "web"}, {"LOWER": "development"}]'),
-        ("web application development", '[{"LOWER": "web"}, {"LOWER": "application"}, {"LOWER": "development"}]'),
-        ("web design", '[{"LOWER": "web"}, {"LOWER": "design"}]'),
+        ("web application development", '[{"LOWER": "web"}, {"LOWER": "application", "OP": "?"}, {"LOWER": {"IN": ["development", "design"]} }]'),
     ],
     "Web Services": [
         ("web services", '[{"LOWER": "web"}, {"LOWER": "services"}]'),
     ],
     "User Experience (UI) and User Interface (UX) Design": [
-        ("user experience", '[{"LOWER": "user"}, {"LOWER": "experience"}]'),
-        ("user interface", '[{"LOWER": "user"}, {"LOWER": "interface"}]'),
-        ("ux design", '[{"LOWER": "ux"}, {"LOWER": "design"}]'),
-        ("ui design", '[{"LOWER": "ui"}, {"LOWER": "design"}]'),
-        ("ui/ux", '[{"LOWER": "ui"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "ux"}]'),
-        ("ux/ui", '[{"LOWER": "ux"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "ui"}]'),
+        ("user experience", '[{"LOWER": "user"}, {"LOWER": {"IN": ["experience", "interface"]} }]'),
+        ("ux design", '[{"LOWER": {"IN": ["ux", "ui"]} }, {"LOWER": "design"}]'),
+        ("ui/ux", '[{"LOWER": {"IN": ["ux", "ui"]} }, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": {"IN": ["ux", "ui"]} }]'),
     ],
      "Unified Modeling Language (UML)": [
         ("unified modeling language", '[{"LOWER": "unified"}, {"LOWER": "modeling"}, {"LOWER": "language"}]'),
@@ -922,34 +844,27 @@ skill_patterns = {
         ("statistics", '[{"LOWER": "statistics"}]'),
     ],
     "System Administration": [
-        ("system administration", '[{"LOWER": "system"}, {"LOWER": "administration"}]'),
-        ("systems adminitration", '[{"LOWER": "systems"}, {"LOWER": "administration"}]'),
+        ("system administration", '[{"LOWER": {"IN": ["system", "systems"]} }, {"LOWER": "administration"}]'),
     ],
     "Systems Analysis": [
-        ("systems analysis", '[{"LOWER": "systems"}, {"LOWER": "analysis"}]'),
-        ("system analysis", '[{"LOWER": "system"}, {"LOWER": "analysis"}]'),
+        ("systems analysis", '[{"LOWER": {"IN": ["system", "systems"]} }, {"LOWER": "analysis"}]'),
         ("analysis services", '[{"LOWER": "analysis"}, {"LOWER": "services"}]'),
     ],    
     "Team Building": [
         ("team building", '[{"LOWER": "team"}, {"LOWER": "building"}]'),
     ],
     "Team Player": [
-        ("teamwork", '[{"LOWER": "teamwork"}]'),
-        ("team work", '[{"LOWER": "team"}, {"LOWER": "work"}]'),
-        ("team player", '[{"LOWER": "team"}, {"LOWER": "player"}]'),
-        ("collaboration", '[{"LOWER": "collaboration"}]'),
-        ("collaborative", '[{"LOWER": "collaborative"}]'),
+        ("teamwork", '[{"LOWER": {"IN": ["teamwork", "teamplayer", "collaborative"]} }]'),
+        ("team work", '[{"LOWER": "team"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": {"IN": ["work", "player"]} }]'),
     ],
     "Telecommunications": [
-        ("telecommunications", '[{"LOWER": "telecommunications"}]'),
-        ("telecommunication", '[{"LOWER": "telecommunication"}]'),
+        ("telecommunications", '[{"LOWER": {"IN": ["telecommunication", "telecommunications"]} }]'),
     ],
     "Time Management": [
         ("time management", '[{"LOWER": "time"}, {"LOWER": "management"}]'),
     ],
     ".NET Framework": [
-        ("dotnet framework", '[{"LOWER": "dotnet"}, {"LOWER": "framework"}]'),
-        (".net framework", '[{"LOWER": ".net"}, {"LOWER": "framework"}]'),
+        ("dotnet framework", '[{"LOWER": {"IN": ["dotnet", ".net", "net"]} }, {"LOWER": "framework"}]'),
         ("dot net framework", '[{"LOWER": "dot"}, {"LOWER": "net"}, {"LOWER": "framework"}]'),
     ],
     "JavaScript Object Notation (JSON)": [
@@ -979,9 +894,7 @@ skill_patterns = {
         ("gitlab", '[{"LOWER": "gitlab"}]'),
     ],
     "Embedded Systems":[
-        ("embedded systems", '[{"LOWER": "embedded"}, {"LOWER": "systems"}]'),
-        ("embedded system", '[{"LOWER": "embedded"}, {"LOWER": "system"}]'),
-        ("embedded software", '[{"LOWER": "embedded"}, {"LOWER": "software"}]'),
+        ("embedded systems", '[{"LOWER": "embedded"}, {"LOWER": {"IN": ["systems", "system", "software"]} }]'),
     ],
     "Application Programming Interfaces (API)":[
         ("application programming interfaces", '[{"LOWER": "application"}, {"LOWER": "programming"}, {"LOWER": "interfaces"}]'),
@@ -991,8 +904,7 @@ skill_patterns = {
         ("recruiting", '[{"LOWER": "recruiting"}]'),
     ],
     "Shell Scripting":[
-        ("shell scripting", '[{"LOWER": "shell"}, {"LOWER": "scripting"}]'),
-        ("shell script", '[{"LOWER": "shell"}, {"LOWER": "script"}]'),
+        ("shell scripting", '[{"LOWER": "shell"}, {"LOWER": {"IN": ["scripting", "script"]} }]'),
     ],
     "Cross-functional Team Leadership":[
         ("cross functional team leadership", '[{"LOWER": "cross"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "functional"}, {"LOWER": "team"}, {"LOWER": "leadership"}]'),
@@ -1037,8 +949,7 @@ skill_patterns = {
         ("start-up", '[{"LOWER": "start"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "up"}]'),
     ],
     "Analytical Skills":[
-        ("analytical skills", '[{"LOWER": "analytical"}, {"LOWER": "skills"}]'),
-        ("analytical skill", '[{"LOWER": "analytical"}, {"LOWER": "skill"}]'),
+        ("analytical skills", '[{"LOWER": "analytical"}, {"LOWER": {"IN": ["skills", "skill"]} }]'),
     ],
     "Information Technology Strategy":[
         ("information technology strategy", '[{"LOWER": "information"}, {"LOWER": "technology"}, {"LOWER": "strategy"}]'),
@@ -1107,136 +1018,105 @@ skill_patterns = {
         ("contract negotiation", '[{"LOWER": "contract"}, {"LOWER": "negotiation"}]'),
     ],
     "Device Drivers Engineering": [
-        ("device drivers", '[{"LOWER": "device"}, {"LOWER": "drivers"}]'),
-        ("device driver", '[{"LOWER": "device"}, {"LOWER": "driver"}]'),
+        ("device drivers", '[{"LOWER": "device"}, {"LOWER": {"IN": ["drivers", "driver"]} }]'),
     ],
     "Computer Vision": [
         ("computer vision", '[{"LOWER": "computer"}, {"LOWER": "vision"}]'),
     ],
     "Amazon Elastic Compute Cloud (Amazon EC2)": [
-        ("amazon ec2", '[{"LOWER": "amazon"}, {"LOWER": "ec2"}]'),
-        ("aws ec2", '[{"LOWER": "aws"}, {"LOWER": "ec2"}]'),
+        ("amazon ec2", '[{"LOWER": "ec2"}]'),
         ("elastic compute cloud", '[{"LOWER": "elastic"}, {"LOWER": "compute"}, {"LOWER": "cloud"}]'),
     ],
     "AWS Lambda": [
-        ("aws lambda", '[{"LOWER": "aws"}, {"LOWER": "lambda"}]'),
-        ("amazon lambda", '[{"LOWER": "amazon"}, {"LOWER": "lambda"}]'),
+        ("aws lambda", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "lambda"}]'),
     ],
     "AWS Batch": [
-        ("aws batch", '[{"LOWER": "aws"}, {"LOWER": "batch"}]'),
-        ("amazon batch", '[{"LOWER": "amazon"}, {"LOWER": "batch"}]'),
+        ("aws batch", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "batch"}]'),
     ],
     "Amazon Lightsail": [
-        ("amazon lightsail", '[{"LOWER": "amazon"}, {"LOWER": "lightsail"}]'),
-        ("aws lightsail", '[{"LOWER": "aws"}, {"LOWER": "lightsail"}]'),
-        ("lightsail", '[{"LOWER": "lightsail"}]'),
+        ("amazon lightsail", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "lightsail"}]'),
     ],
     "AWS Elastic Beanstalk": [
-        ("aws elastic beanstalk", '[{"LOWER": "aws"}, {"LOWER": "elastic"}, {"LOWER": "beanstalk"}]'),
-        ("amazon elastic beanstalk", '[{"LOWER": "amazon"}, {"LOWER": "elastic"}, {"LOWER": "beanstalk"}]'),
-        ("elastic beanstalk", '[{"LOWER": "elastic"}, {"LOWER": "beanstalk"}]'),
+        ("aws elastic beanstalk", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "elastic"}, {"LOWER": "beanstalk"}]'),
     ],
     "AWS Fargate": [
-        ("aws fargate", '[{"LOWER": "aws"}, {"LOWER": "fargate"}]'),
-        ("amazon fargate", '[{"LOWER": "amazon"}, {"LOWER": "fargate"}]'),
-        ("fargate", '[{"LOWER": "fargate"}]'),
+        ("aws fargate", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "fargate"}]'),
     ],
     "AWS Outposts": [
-        ("aws outposts", '[{"LOWER": "aws"}, {"LOWER": "outposts"}]'),
-        ("amazon outposts", '[{"LOWER": "amazon"}, {"LOWER": "outposts"}]'),
-        ("outposts", '[{"LOWER": "outposts"}]'),
+        ("aws outposts", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "outposts"}]'),
     ],
     "AWS Serverless Application Repository": [
-        ("aws serverless application repository", '[{"LOWER": "aws"}, {"LOWER": "serverless"}, {"LOWER": "application"}, {"LOWER": "repository"}]'),
-        ("amazon serverless application repository", '[{"LOWER": "amazon"}, {"LOWER": "serverless"}, {"LOWER": "application"}, {"LOWER": "repository"}]'),
-        ("serverless application repository", '[{"LOWER": "serverless"}, {"LOWER": "application"}, {"LOWER": "repository"}]'),
+        ("aws serverless application repository", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "serverless"}, {"LOWER": "application"}, {"LOWER": "repository"}]'),
     ],
     "AWS Snow Family": [
-        ("aws snow", '[{"LOWER": "aws"}, {"LOWER": "snow"}]'),
-        ("amazon snow", '[{"LOWER": "amazon"}, {"LOWER": "snow"}]'),
+        ("aws snow", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "snow"}]'),
     ],
     "Amazon Simple Storage Service (Amazon S3)": [
-        ("amazon s3", '[{"LOWER": "amazon"}, {"LOWER": "s3"}]'),
-        ("aws s3", '[{"LOWER": "aws"}, {"LOWER": "s3"}]'),
+        ("amazon s3", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "s3"}]'),
         ("simple storage service", '[{"LOWER": "simple"}, {"LOWER": "storage"}, {"LOWER": "service"}]'),
     ],
     "Amazon Elastic Block Store (Amazon EBS)": [
-        ("amazon ebs", '[{"LOWER": "amazon"}, {"LOWER": "ebs"}]'),
-        ("aws ebs", '[{"LOWER": "aws"}, {"LOWER": "ebs"}]'),
+        ("amazon ebs", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "ebs"}]'),
         ("elastic block store", '[{"LOWER": "elastic"}, {"LOWER": "block"}, {"LOWER": "store"}]'),
     ],
     "Amazon Elastic File System (Amazon EFS)": [
-        ("amazon efs", '[{"LOWER": "amazon"}, {"LOWER": "efs"}]'),
-        ("aws efs", '[{"LOWER": "aws"}, {"LOWER": "efs"}]'),
+        ("amazon efs", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "efs"}]'),
         ("elastic file system", '[{"LOWER": "elastic"}, {"LOWER": "file"}, {"LOWER": "system"}]'),
     ],
     "Amazon File Systems (Amazon FSx)": [
-        ("amazon fsx", '[{"LOWER": "amazon"}, {"LOWER": "fsx"}]'),
-        ("aws fsx", '[{"LOWER": "aws"}, {"LOWER": "fsx"}]'),
-        ("amazon file systems", '[{"LOWER": "amazon"}, {"LOWER": "file"}, {"LOWER": "systems"}]'),
-        ("aws file systems", '[{"LOWER": "aws"}, {"LOWER": "file"}, {"LOWER": "systems"}]'),
+        ("amazon fsx", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "fsx"}]'),
+        ("amazon file systems", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "file"}, {"LOWER": "systems"}]'),
     ],
     "Amazon S3 Glacier": [
-        ("amazon glacier", '[{"LOWER": "amazon"}, {"LOWER": "glacier"}]'),
-        ("aws glacier", '[{"LOWER": "aws"}, {"LOWER": "glacier"}]'),
+        ("amazon glacier", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "glacier"}]'),
         ("s3 glacier", '[{"LOWER": "s3"}, {"LOWER": "glacier"}]'),
     ],
     "AWS Storage Gateway": [
-        ("aws storage gateway", '[{"LOWER": "aws"}, {"LOWER": "storage"}, {"LOWER": "gateway"}]'),
-        ("amazon storage gateway", '[{"LOWER": "amazon"}, {"LOWER": "storage"}, {"LOWER": "gateway"}]'),
+        ("aws storage gateway", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "storage"}, {"LOWER": "gateway"}]'),
     ],
     "AWS Backup": [
-        ("aws backup", '[{"LOWER": "aws"}, {"LOWER": "backup"}]'),
-        ("amazon backup", '[{"LOWER": "amazon"}, {"LOWER": "backup"}]'),
+        ("aws backup", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "backup"}]'),
     ],
     "Amazon Relational Database Service (Amazon RDS)": [
-        ("amazon rds", '[{"LOWER": "amazon"}, {"LOWER": "rds"}]'),
-        ("aws rds", '[{"LOWER": "aws"}, {"LOWER": "rds"}]'),
+        ("amazon rds", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "rds"}]'),
         ("relational database service", '[{"LOWER": "relational"}, {"LOWER": "database"}, {"LOWER": "service"}]'),
     ],
     "Amazon DynamoDB": [
         ("dynamodb", '[{"LOWER": "dynamodb"}]'),
-        ("dynamo db", '[{"LOWER": "dynamo"}, {"LOWER": "db"}]'),
-        ("dynamo database", '[{"LOWER": "dynamo"}, {"LOWER": "database"}]'),
+        ("dynamo db", '[{"LOWER": "dynamo"}, {"LOWER": {"IN": ["db", "database"]} }]'),
     ],
     "Amazon ElastiCache": [
         ("elasticache", '[{"LOWER": "elasticache"}]'),
     ],
     "Amazon Neptune": [
-        ("amazon neptune", '[{"LOWER": "amazon"}, {"LOWER": "neptune"}]'),
-        ("aws neptune", '[{"LOWER": "aws"}, {"LOWER": "neptune"}]'),
+        ("amazon neptune", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "neptune"}]'),
     ],
     "Amazon Redshift": [
         ("redshift", '[{"LOWER": "redshift"}]'),
     ],
     "AWS Database Migration Service (Amazon DMS)": [
         ("database migration service", '[{"LOWER": "database"}, {"LOWER": "migration"}, {"LOWER": "service"}]'),
-        ("aws dms", '[{"LOWER": "aws"}, {"LOWER": "dms"}]'),
-        ("amazon dms", '[{"LOWER": "amazon"}, {"LOWER": "dms"}]'),
+        ("aws dms", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "dms"}]'),
     ],
     "AWS DocumentDB": [
         ("documentdb", '[{"LOWER": "documentdb"}]'),
         ("document db", '[{"LOWER": "document"}, {"LOWER": "db"}]'),
     ],
     "AWS Timestream": [
-        ("amazon timestream", '[{"LOWER": "amazon"}, {"LOWER": "timestream"}]'),
-        ("aws timestream", '[{"LOWER": "aws"}, {"LOWER": "timestream"}]'),
+        ("amazon timestream", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "timestream"}]'),
     ],
     "Amazon Virtual Private Cloud (Amazon VPC)": [
-        ("amazon vpc", '[{"LOWER": "amazon"}, {"LOWER": "vpc"}]'),
-        ("aws vpc", '[{"LOWER": "aws"}, {"LOWER": "vpc"}]'),
+        ("amazon vpc", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "vpc"}]'),
         ("virtual private cloud", '[{"LOWER": "virtual"}, {"LOWER": "private"}, {"LOWER": "cloud"}]'),
     ],
     "Amazon Route 53": [
         ("route 53", '[{"LOWER": "route"}, {"LOWER": "53"}]'),
     ],
     "Amazon API Gateway": [
-        ("amazon api gateway", '[{"LOWER": "amazon"}, {"LOWER": "api"}, {"LOWER": "gateway"}]'),
-        ("aws api gateway", '[{"LOWER": "aws"}, {"LOWER": "api"}, {"LOWER": "gateway"}]'),
+        ("amazon api gateway", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "api"}, {"LOWER": "gateway"}]'),
     ],
     "AWS Direct Connect": [
-        ("aws direct connect", '[{"LOWER": "aws"}, {"LOWER": "direct"}, {"LOWER": "connect"}]'),
-        ("amazon direct connect", '[{"LOWER": "amazon"}, {"LOWER": "direct"}, {"LOWER": "connect"}]'),
+        ("aws direct connect", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "direct"}, {"LOWER": "connect"}]'),
     ],
     "AWS App Mesh": [
         ("app mesh", '[{"LOWER": "app"}, {"LOWER": "mesh"}]'),
@@ -1245,185 +1125,139 @@ skill_patterns = {
         ("cloudfront", '[{"LOWER": "cloudfront"}]'),
     ],
     "AWS Global Accelerator": [
-        ("aws global accelerator", '[{"LOWER": "aws"}, {"LOWER": "global"}, {"LOWER": "accelerator"}]'),
-        ("amazon global accelerator", '[{"LOWER": "amazon"}, {"LOWER": "global"}, {"LOWER": "accelerator"}]'),
+        ("aws global accelerator", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "global"}, {"LOWER": "accelerator"}]'),
     ],
     "AWS Transit Gateway": [
-        ("aws transit gateway", '[{"LOWER": "aws"}, {"LOWER": "transit"}, {"LOWER": "gateway"}]'),
-        ("amazon transit gateway", '[{"LOWER": "amazon"}, {"LOWER": "transit"}, {"LOWER": "gateway"}]'),
+        ("aws transit gateway", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "transit"}, {"LOWER": "gateway"}]'),
     ],
     "AWS PrivateLink": [
-        ("aws privatelink", '[{"LOWER": "aws"}, {"LOWER": "privatelink"}]'),
-        ("amazon privatelink", '[{"LOWER": "amazon"}, {"LOWER": "privatelink"}]'),
+        ("aws privatelink", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "privatelink"}]'),
     ],
     "Amazon Elastic Load Balancing (Amazon ELB)": [
-        ("amazon elb", '[{"LOWER": "amazon"}, {"LOWER": "elb"}]'),
-        ("aws elb", '[{"LOWER": "aws"}, {"LOWER": "elb"}]'),
+        ("amazon elb", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "elb"}]'),
         ("elastic load balancing", '[{"LOWER": "elastic"}, {"LOWER": "load"}, {"LOWER": "balancing"}]'),
     ],
     "AWS Identity and Access Management (AWS IAM)": [
-        ("aws iam", '[{"LOWER": "aws"}, {"LOWER": "iam"}]'),
-        ("amazon iam", '[{"LOWER": "amazon"}, {"LOWER": "iam"}]'),
-        ("aws identity and access management", '[{"LOWER": "aws"}, {"LOWER": "identity"}, {"LOWER": "and"}, {"LOWER": "access"}, {"LOWER": "management"}]'),
-        ("amazon identity and access management", '[{"LOWER": "amazon"}, {"LOWER": "identity"}, {"LOWER": "and"}, {"LOWER": "access"}, {"LOWER": "management"}]'),
+        ("aws iam", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "iam"}]'),
+        ("aws identity and access management", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "identity"}, {"LOWER": "and"}, {"LOWER": "access"}, {"LOWER": "management"}]'),
     ],
     "AWS Organizations": [
-        ("aws organizations", '[{"LOWER": "aws"}, {"LOWER": "organizations"}]'),
-        ("amazon organizations", '[{"LOWER": "amazon"}, {"LOWER": "organizations"}]'),
+        ("aws organizations", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "organizations"}]'),
     ],
     "AWS Certificate Manager (ACM)": [
-        ("aws certificate manager", '[{"LOWER": "aws"}, {"LOWER": "certificate"}, {"LOWER": "manager"}]'),
-        ("amazon certificate manager", '[{"LOWER": "amazon"}, {"LOWER": "certificate"}, {"LOWER": "manager"}]'),
-        ("aws acm", '[{"LOWER": "aws"}, {"LOWER": "acm"}]'),
-        ("amazon acm", '[{"LOWER": "amazon"}, {"LOWER": "acm"}]'),
+        ("aws certificate manager", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "certificate"}, {"LOWER": "manager"}]'),
+        ("aws acm", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "acm"}]'),
     ],
     "AWS Secrets Manager": [
-        ("aws secrets manager", '[{"LOWER": "aws"}, {"LOWER": "secrets"}, {"LOWER": "manager"}]'),
-        ("amazon secrets manager", '[{"LOWER": "amazon"}, {"LOWER": "secrets"}, {"LOWER": "manager"}]'),
+        ("aws secrets manager", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "secrets"}, {"LOWER": "manager"}]'),
     ],
     "Amazon Web Application Firewall (AWS WAF)": [
-        ("aws waf", '[{"LOWER": "aws"}, {"LOWER": "waf"}]'),
-        ("amazon waf", '[{"LOWER": "amazon"}, {"LOWER": "waf"}]'),
-        ("aws web application firewall", '[{"LOWER": "aws"}, {"LOWER": "web"}, {"LOWER": "application"}, {"LOWER": "firewall"}]'),
-        ("amazon web application firewall", '[{"LOWER": "amazon"}, {"LOWER": "web"}, {"LOWER": "application"}, {"LOWER": "firewall"}]'),
+        ("aws waf", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "waf"}]'),
+        ("aws web application firewall", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "web"}, {"LOWER": "application"}, {"LOWER": "firewall"}]'),
     ],
     "Amazon GuardDuty": [
-        ("amazon guardduty", '[{"LOWER": "amazon"}, {"LOWER": "guardduty"}]'),
-        ("aws guardduty", '[{"LOWER": "aws"}, {"LOWER": "guardduty"}]'),
+        ("amazon guardduty", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "guardduty"}]'),
     ],
     "Amazon Macie":[
-        ("amazon macie", '[{"LOWER": "amazon"}, {"LOWER": "macie"}]'),
-        ("aws macie", '[{"LOWER": "aws"}, {"LOWER": "macie"}]'),
+        ("amazon macie", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "macie"}]'),
     ],
     "AWS Shield": [
-        ("aws shield", '[{"LOWER": "aws"}, {"LOWER": "shield"}]'),
-        ("amazon shield", '[{"LOWER": "amazon"}, {"LOWER": "shield"}]'),
+        ("aws shield", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "shield"}]'),
     ],
     "AWS Artifact":[
-        ("aws artifact", '[{"LOWER": "aws"}, {"LOWER": "artifact"}]'),
-        ("amazon artifact", '[{"LOWER": "amazon"}, {"LOWER": "artifact"}]'),
+        ("aws artifact", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "artifact"}]'),
     ],
     "AWS Single Sign-On (Amazon SSO)":[
-        ("aws sso", '[{"LOWER": "aws"}, {"LOWER": "sso"}]'),
-        ("amazon sso", '[{"LOWER": "amazon"}, {"LOWER": "sso"}]'),
-        ("aws single sign-on", '[{"LOWER": "aws"}, {"LOWER": "single"}, {"LOWER": "sign"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "on"}]'),
-        ("amazon single sign-on", '[{"LOWER": "amazon"}, {"LOWER": "single"}, {"LOWER": "sign"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "on"}]'),
+        ("aws sso", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "sso"}]'),
+        ("aws single sign-on", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "single"}, {"LOWER": "sign"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "on"}]'),
     ],
     "Amazon Athena":[
-        ("amazon athena", '[{"LOWER": "amazon"}, {"LOWER": "athena"}]'),
-        ("aws athena", '[{"LOWER": "aws"}, {"LOWER": "athena"}]'),
+        ("amazon athena", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "athena"}]'),
     ],
     "Amazon Elastic MapReduce (Amazon EMR)": [
-        ("amazon emr", '[{"LOWER": "amazon"}, {"LOWER": "emr"}]'),
-        ("aws emr", '[{"LOWER": "aws"}, {"LOWER": "emr"}]'),
-        ("amazon elastic mapreduce", '[{"LOWER": "amazon"}, {"LOWER": "elastic"}, {"LOWER": "mapreduce"}]'),
-        ("aws elastic mapreduce", '[{"LOWER": "aws"}, {"LOWER": "elastic"}, {"LOWER": "mapreduce"}]'),
-        ("amazon elastic map reduce", '[{"LOWER": "amazon"}, {"LOWER": "elastic"}, {"LOWER": "map"}, {"LOWER": "reduce"}]'),
-        ("aws elastic map reduce", '[{"LOWER": "aws"}, {"LOWER": "elastic"}, {"LOWER": "map"}, {"LOWER": "reduce"}]'),
+        ("amazon emr", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "emr"}]'),
+        ("amazon elastic mapreduce", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "elastic"}, {"LOWER": "mapreduce"}]'),
+        ("amazon elastic map reduce", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "elastic"}, {"LOWER": "map"}, {"LOWER": "reduce"}]'),
     ],
     "Amazon QuickSight":[
         ("quicksight", '[{"LOWER": "quicksight"}]'),
         ("quick sight", '[{"LOWER": "quick"}, {"LOWER": "sight"}]'),
     ],
     "Amazon Kinesis":[
-        ("amazon kinesis", '[{"LOWER": "amazon"}, {"LOWER": "kinesis"}]'),
-        ("aws kinesis", '[{"LOWER": "aws"}, {"LOWER": "kinesis"}]'),
+        ("amazon kinesis", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "kinesis"}]'),
     ],
     "AWS Data Pipeline":[
-        ("aws data pipeline", '[{"LOWER": "aws"}, {"LOWER": "data"}, {"LOWER": "pipeline"}]'),
-        ("amazon data pipeline", '[{"LOWER": "amazon"}, {"LOWER": "data"}, {"LOWER": "pipeline"}]'),
+        ("aws data pipeline", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "data"}, {"LOWER": "pipeline"}]'),
     ],
     "AWS Glue": [
-        ("aws glue", '[{"LOWER": "aws"}, {"LOWER": "glue"}]'),
-        ("amazon glue", '[{"LOWER": "amazon"}, {"LOWER": "glue"}]'),
+        ("aws glue", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "glue"}]'),
     ],
     "AWS Lake Formation": [
-        ("aws lake formation", '[{"LOWER": "aws"}, {"LOWER": "lake"}, {"LOWER": "formation"}]'),
-        ("amazon lake formation", '[{"LOWER": "amazon"}, {"LOWER": "lake"}, {"LOWER": "formation"}]'),
+        ("aws lake formation", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "lake"}, {"LOWER": "formation"}]'),
     ],
     "Amazon Managed Streaming for Apache Kafka (Amazon MSK)": [
-        ("amazon msk", '[{"LOWER": "amazon"}, {"LOWER": "msk"}]'),
-        ("aws msk", '[{"LOWER": "aws"}, {"LOWER": "msk"}]'),
+        ("amazon msk", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "msk"}]'),
         ("managed streaming for apache kafka", '[{"LOWER": "managed"}, {"LOWER": "streaming"}, {"LOWER": "for"}, {"LOWER": "apache"}, {"LOWER": "kafka"}]'),
     ],
     "Amazon SageMaker": [
         ("sagemaker", '[{"LOWER": "sagemaker"}]'),
     ],
     "Amazon Comprehend": [
-        ("amazon comprehend", '[{"LOWER": "amazon"}, {"LOWER": "comprehend"}]'),
-        ("aws comprehend", '[{"LOWER": "aws"}, {"LOWER": "comprehend"}]'),
+        ("amazon comprehend", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "comprehend"}]'),
     ],
     "Amazon Lex": [
-        ("amazon lex", '[{"LOWER": "amazon"}, {"LOWER": "lex"}]'),
-        ("aws lex", '[{"LOWER": "aws"}, {"LOWER": "lex"}]'),
+        ("amazon lex", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "lex"}]'),
     ],
     "Amazon Polly":[
-        ("amazon polly", '[{"LOWER": "amazon"}, {"LOWER": "polly"}]'),
-        ("aws polly", '[{"LOWER": "aws"}, {"LOWER": "polly"}]'),
+        ("amazon polly", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "polly"}]'),
     ],
     "Amazon Rekognition": [
-        ("amazon rekognition", '[{"LOWER": "amazon"}, {"LOWER": "rekognition"}]'),
-        ("aws rekognition", '[{"LOWER": "aws"}, {"LOWER": "rekognition"}]'),
+        ("amazon rekognition", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "rekognition"}]'),
     ],
     "Amazon TextTract": [
-        ("amazon texttract", '[{"LOWER": "amazon"}, {"LOWER": "texttract"}]'),
-        ("aws texttract", '[{"LOWER": "aws"}, {"LOWER": "texttract"}]'),
+        ("amazon texttract", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "texttract"}]'),
     ],
     "Amazon Translate": [
-        ("amazon translate", '[{"LOWER": "amazon"}, {"LOWER": "translate"}]'),
-        ("aws translate", '[{"LOWER": "aws"}, {"LOWER": "translate"}]'),
+        ("amazon translate", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "translate"}]'),
     ],
     "Amazon Transcribe": [
-        ("amazon transcribe", '[{"LOWER": "amazon"}, {"LOWER": "transcribe"}]'),
-        ("aws transcribe", '[{"LOWER": "aws"}, {"LOWER": "transcribe"}]'),
+        ("amazon transcribe", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "transcribe"}]'),
     ],
     "AWS DeepRacer": [
-        ("aws deepracer", '[{"LOWER": "aws"}, {"LOWER": "deepracer"}]'),
-        ("amazon deepracer", '[{"LOWER": "amazon"}, {"LOWER": "deepracer"}]'),
+        ("aws deepracer", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "deepracer"}]'),
     ],
     "AWS DeepLens": [
-        ("aws deeplens", '[{"LOWER": "aws"}, {"LOWER": "deeplens"}]'),
-        ("amazon deeplens", '[{"LOWER": "amazon"}, {"LOWER": "deeplens"}]'),
+        ("aws deeplens", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "deeplens"}]'),
     ],
     "AWS DeepComposer": [
-        ("aws deepcomposer", '[{"LOWER": "aws"}, {"LOWER": "deepcomposer"}]'),
-        ("amazon deepcomposer", '[{"LOWER": "amazon"}, {"LOWER": "deepcomposer"}]'),
+        ("aws deepcomposer", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "deepcomposer"}]'),
     ],
     "Amazon Simple Queue Service (Amazon SQS)": [
-        ("amazon sqs", '[{"LOWER": "amazon"}, {"LOWER": "sqs"}]'),
-        ("aws sqs", '[{"LOWER": "aws"}, {"LOWER": "sqs"}]'),
-        ("amazon simple queue service", '[{"LOWER": "amazon"}, {"LOWER": "simple"}, {"LOWER": "queue"}, {"LOWER": "service"}]'),
-        ("aws simple queue service", '[{"LOWER": "aws"}, {"LOWER": "simple"}, {"LOWER": "queue"}, {"LOWER": "service"}]'),
+        ("amazon sqs", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "sqs"}]'),
+        ("amazon simple queue service", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "simple"}, {"LOWER": "queue"}, {"LOWER": "service"}]'),
     ],
     "Amazon Simple Notification Service (Amazon SNS)": [
-        ("amazon sns", '[{"LOWER": "amazon"}, {"LOWER": "sns"}]'),
-        ("aws sns", '[{"LOWER": "aws"}, {"LOWER": "sns"}]'),
-        ("amazon simple notification service", '[{"LOWER": "amazon"}, {"LOWER": "simple"}, {"LOWER": "notification"}, {"LOWER": "service"}]'),
-        ("aws simple notification service", '[{"LOWER": "aws"}, {"LOWER": "simple"}, {"LOWER": "notification"}, {"LOWER": "service"}]'),
+        ("amazon sns", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "sns"}]'),
+        ("amazon simple notification service", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "simple"}, {"LOWER": "notification"}, {"LOWER": "service"}]'),
     ],
     "Amazon EventBridge": [
         ("eventbridge", '[{"LOWER": "eventbridge"}]'),
     ],
     "Amazon AppFlow": [
-        ("amazon appflow", '[{"LOWER": "amazon"}, {"LOWER": "appflow"}]'),
-        ("aws appflow", '[{"LOWER": "aws"}, {"LOWER": "appflow"}]'),
+        ("amazon appflow", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "appflow"}]'),
     ],
     "AWS Step Functions": [
-        ("aws step functions", '[{"LOWER": "aws"}, {"LOWER": "step"}, {"LOWER": "functions"}]'),
-        ("amazon step functions", '[{"LOWER": "amazon"}, {"LOWER": "step"}, {"LOWER": "functions"}]'),
+        ("aws step functions", '[,{"LOWER": {"IN": ["aws", "amazon"]} } {"LOWER": "step"}, {"LOWER": "functions"}]'),
     ],
     "AWS Simple Workflow Service (Amazon SWF)": [
-        ("aws swf", '[{"LOWER": "aws"}, {"LOWER": "swf"}]'),
-        ("amazon swf", '[{"LOWER": "amazon"}, {"LOWER": "swf"}]'),
-        ("aws simple workflow service", '[{"LOWER": "aws"}, {"LOWER": "simple"}, {"LOWER": "workflow"}, {"LOWER": "service"}]'),
-        ("amazon simple workflow service", '[{"LOWER": "amazon"}, {"LOWER": "simple"}, {"LOWER": "workflow"}, {"LOWER": "service"}]'),
+        ("aws swf", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "swf"}]'),
+        ("aws simple workflow service", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "simple"}, {"LOWER": "workflow"}, {"LOWER": "service"}]'),
     ],
     "Amazon CloudWatch": [
         ("cloudwatch", '[{"LOWER": "cloudwatch"}]'),
     ],
     "AWS Auto Scaling": [
-        ("aws auto scaling", '[{"LOWER": "aws"}, {"LOWER": "auto"}, {"LOWER": "scaling"}]'),
-        ("amazon auto scaling", '[{"LOWER": "amazon"}, {"LOWER": "auto"}, {"LOWER": "scaling"}]'),
+        ("aws auto scaling", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "auto"}, {"LOWER": "scaling"}]'),
     ],
     "AWS CloudFormation": [
         ("cloudformation", '[{"LOWER": "cloudformation"}]'),
@@ -1432,43 +1266,34 @@ skill_patterns = {
         ("cloudtrail", '[{"LOWER": "cloudtrail"}]'),
     ],
     "AWS Config": [
-        ("aws config", '[{"LOWER": "aws"}, {"LOWER": "config"}]'),
-        ("amazon config", '[{"LOWER": "amazon"}, {"LOWER": "config"}]'),
+        ("aws config", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "config"}]'),
     ],
     "AWS OpsWorks": [
         ("opsworks", '[{"LOWER": "opsworks"}]'),
     ],
     "AWS Service Catalog": [
-        ("aws service catalog", '[{"LOWER": "aws"}, {"LOWER": "service"}, {"LOWER": "catalog"}]'),
-        ("amazon service catalog", '[{"LOWER": "amazon"}, {"LOWER": "service"}, {"LOWER": "catalog"}]'),
+        ("aws service catalog", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "service"}, {"LOWER": "catalog"}]'),
     ],
     "AWS Trusted Advisor": [
-        ("aws trusted advisor", '[{"LOWER": "aws"}, {"LOWER": "trusted"}, {"LOWER": "advisor"}]'),
-        ("amazon trusted advisor", '[{"LOWER": "amazon"}, {"LOWER": "trusted"}, {"LOWER": "advisor"}]'),
+        ("aws trusted advisor", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "trusted"}, {"LOWER": "advisor"}]'),
     ],
     "AWS Well-Architected Tool": [
-        ("aws well-architected tool", '[{"LOWER": "aws"}, {"LOWER": "well"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "architected"}, {"LOWER": "tool"}]'),
-        ("amazon well-architected tool", '[{"LOWER": "amazon"}, {"LOWER": "well"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "architected"}, {"LOWER": "tool"}]'),
+        ("aws well-architected tool", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "well"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "architected"}, {"LOWER": "tool"}]'),
     ],
     "AWS Control Tower":[
-        ("aws control tower", '[{"LOWER": "aws"}, {"LOWER": "control"}, {"LOWER": "tower"}]'),
-        ("amazon control tower", '[{"LOWER": "amazon"}, {"LOWER": "control"}, {"LOWER": "tower"}]'),
+        ("aws control tower", '[{{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "control"}, {"LOWER": "tower"}]'),
     ],
     "AWS IoT Core": [
-        ("aws iot core", '[{"LOWER": "aws"}, {"LOWER": "iot"}, {"LOWER": "core"}]'),
-        ("amazon iot core", '[{"LOWER": "amazon"}, {"LOWER": "iot"}, {"LOWER": "core"}]'),
+        ("aws iot core", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "iot"}, {"LOWER": "core"}]'),
     ],
     "AWS IoT Device Management": [
-        ("aws iot device management", '[{"LOWER": "aws"}, {"LOWER": "iot"}, {"LOWER": "device"}, {"LOWER": "management"}]'),
-        ("amazon iot device management", '[{"LOWER": "amazon"}, {"LOWER": "iot"}, {"LOWER": "device"}, {"LOWER": "management"}]'),
+        ("aws iot device management", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "iot"}, {"LOWER": "device"}, {"LOWER": "management"}]'),
     ],
     "AWS IoT Analytics": [
-        ("aws iot analytics", '[{"LOWER": "aws"}, {"LOWER": "iot"}, {"LOWER": "analytics"}]'),
-        ("amazon iot analytics", '[{"LOWER": "amazon"}, {"LOWER": "iot"}, {"LOWER": "analytics"}]'),
+        ("aws iot analytics", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "iot"}, {"LOWER": "analytics"}]'),
     ],
     "AWS IoT Greengrass": [
-        ("aws iot greengrass", '[{"LOWER": "aws"}, {"LOWER": "iot"}, {"LOWER": "greengrass"}]'),
-        ("amazon iot greengrass", '[{"LOWER": "amazon"}, {"LOWER": "iot"}, {"LOWER": "greengrass"}]'),
+        ("aws iot greengrass", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "iot"}, {"LOWER": "greengrass"}]'),
     ],
     "Waterfall Methodologies": [
         ("waterfall", '[{"LOWER": "waterfall"}]'),
@@ -1508,13 +1333,10 @@ skill_patterns = {
         ("vulnerability management", '[{"LOWER": "vulnerability"}, {"LOWER": "management"}]'),
     ],
     "Penetration Testing": [
-        ("penetration testing", '[{"LOWER": "penetration"}, {"LOWER": "testing"}]'),
-        ("penetration test", '[{"LOWER": "penetration"}, {"LOWER": "test"}]'),
+        ("penetration testing", '[{"LOWER": "penetration"}, {"LOWER": {"IN": ["testing", "test"]} }]'),
     ],
     "Security Awareness and Training": [
-        ("security awareness", '[{"LOWER": "security"}, {"LOWER": "awareness"}]'),
-        ("security training", '[{"LOWER": "security"}, {"LOWER": "training"}]'),
-        ("security advocate", '[{"LOWER": "security"}, {"LOWER": "advocate"}]'),
+        ("security awareness", '[{"LOWER": "security"}, {"LOWER": {"IN": ["awareness", "training", "advocate"]} }]'),
     ],
     "Cryptography": [
         ("cryptography", '[{"LOWER": "cryptography"}]'),
@@ -1523,8 +1345,7 @@ skill_patterns = {
         ("security operations", '[{"LOWER": "security"}, {"LOWER": "operations"}]'),
     ],
     "Security Governance and Compliance": [
-        ("security governance", '[{"LOWER": "security"}, {"LOWER": "governance"}]'),
-        ("security compliance", '[{"LOWER": "security"}, {"LOWER": "compliance"}]'),
+        ("security governance", '[{"LOWER": "security"}, {"LOWER": {"IN": ["governance", "compliance]} }]'),
     ],
     "Mobile Security": [
         ("mobile security", '[{"LOWER": "mobile"}, {"LOWER": "security"}]'),
@@ -1536,12 +1357,10 @@ skill_patterns = {
         ("social engineering", '[{"LOWER": "social"}, {"LOWER": "engineering"}]'),
     ],
     "Cisco Technologies": [
-        ("cisco technologies", '[{"LOWER": "cisco"}, {"LOWER": "technologies"}]'),
-        ("cisco technology", '[{"LOWER": "cisco"}, {"LOWER": "technology"}]'),
+        ("cisco technologies", '[{"LOWER": "cisco"}, {"LOWER": {"IN": ["technology", "technologies"]} }]'),
     ],
     "Microsoft Exchange": [
-        ("microsoft exchange", '[{"LOWER": "microsoft"}, {"LOWER": "exchange"}]'),
-        ("ms exchange", '[{"LOWER": "ms"}, {"LOWER": "exchange"}]'),
+        ("microsoft exchange", '[{"LOWER": {"IN": ["ms", "microsoft"]} }, {"LOWER": "exchange"}]'),
     ],
     "Adobe Illustrator": [
         ("adobe illustrator", '[{"LOWER": "adobe"}, {"LOWER": "illustrator"}]'),
@@ -1562,8 +1381,7 @@ skill_patterns = {
         ("financial analysis", '[{"LOWER": "financial"}, {"LOWER": "analysis"}]'),
     ],
     "Six Sigma": [
-        ("six sigma", '[{"LOWER": "six"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "sigma"}]'),
-        ("6 sigma", '[{"LOWER": "6"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "sigma"}]'),
+        ("six sigma", '[{"LOWER": {"IN": ["six", "6"]} }, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "sigma"}]'),
     ],
     "Arduino": [
         ("arduino", '[{"LOWER": "arduino"}]'),
@@ -1612,8 +1430,7 @@ skill_patterns = {
         ("performance tuning", '[{"LOWER": "performance"}, {"LOWER": "tuning"}]'),
     ],
     "Microcontrollers": [
-        ("microcontrollers", '[{"LOWER": "microcontrollers"}]'),
-        ("microcontroller", '[{"LOWER": "microcontroller"}]'),
+        ("microcontrollers", '[{"LOWER": {"IN": ["microcontrollers", "microcontroller"]} }]'),
     ],
     "Management Consulting": [
         ("management consulting", '[{"LOWER": "management"}, {"LOWER": "consulting"}]'),
@@ -1644,8 +1461,7 @@ skill_patterns = {
     "Microsoft Visual Basic Scripting Edition (VBScript)": [
         ("vbscript", '[{"LOWER": "vbscript"}]'),
         ("vb-script", '[{"LOWER": "vb"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "script"}]'),
-        ("visual basic script", '[{"LOWER": "visual"}, {"LOWER": "basic"}, {"LOWER": "script"}]'),
-        ("visual basic scripting", '[{"LOWER": "visual"}, {"LOWER": "basic"}, {"LOWER": "scripting"}]'),
+        ("visual basic script", '[{"LOWER": "visual"}, {"LOWER": "basic"}, {"LOWER": {"IN": ["script", "scripting"]} }]'),
     ],
     "Budget Planning": [
         ("budget planning", '[{"LOWER": "budget"}, {"LOWER": "planning"}]'),
@@ -1818,9 +1634,8 @@ skill_patterns = {
         ("heroku", '[{"LOWER": "heroku"}]'),
     ],
     "Backbone.JS": [
-        ("backbone.js", '[{"LOWER": "backbone.js"}]'),
+        ("backbone.js", '[{"LOWER": {"IN": ["backbone.js", "backbonejs"]} }]'),
         ("backbone js", '[{"LOWER": "backbone"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "js"}]'),
-        ("backbonejs", '[{"LOWER": "backbonejs"}]'),
     ],
     "Product Design": [
         ("product design", '[{"LOWER": "product"}, {"LOWER": "design"}]'),
