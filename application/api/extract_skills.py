@@ -46,11 +46,8 @@ def extract_skills(resume_text):
     for match_id, start, end in matches:
         match_text = doc[start:end].text
 
-        for skill_id, skill_description, category, alias, regex in skills:
-            if (
-                (alias is not None and alias.lower() == match_text.lower()) or
-                (regex is not None and re.match(regex, match_text.lower(), re.IGNORECASE))
-            ):
+        for skill_id, skill_description, category, regex in skills:
+            if (regex is not None and re.match(regex, match_text.lower(), re.IGNORECASE)):
                 official_skill_list.add(skill_id + ' - ' + skill_description + ' - ' + category)
                 break
         else:
