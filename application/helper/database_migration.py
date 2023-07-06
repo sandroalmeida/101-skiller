@@ -9,7 +9,6 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 resources_path = os.path.join(current_dir, '..', 'resources')
 sys.path.append(resources_path)
 
-from v2.official_skill import official_skill
 from v2.official_skill_regex import official_skill_regex
 from v2.skill_patterns_dictionary import skill_patterns
 
@@ -22,48 +21,33 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
+# Truncate tables
+mycursor.execute("TRUNCATE TABLE skill_pattern")
+mycursor.execute("TRUNCATE TABLE skill_regex_dictionary")
+mycursor.execute("TRUNCATE TABLE skill")
+mycursor.execute("TRUNCATE TABLE skill_category")
+
 # Skill Category
-for key in official_skill.keys():
-    category_description = key.split("|")[2]
+for key in official_skill_regex.keys():
+    category_description = key.split("|")[1]
     sql = "INSERT IGNORE INTO skill_category (skill_category_id, description) VALUES (UUID(), %s)"
     val = (category_description,)
     mycursor.execute(sql, val)
 
 # Skill
-for key in official_skill.keys():
-    category_description = key.split("|")[2]
-    skill_description = key.split("|")[1]
-    mycursor.execute("SELECT skill_category_id FROM skill_category WHERE description = %s", (category_description,))
-    skill_category_id = mycursor.fetchone()[0]
-
-    sql = "INSERT IGNORE INTO skill (skill_id, description, skill_category_id) VALUES (UUID(), %s, %s)"
-    val = (skill_description, skill_category_id)
-    mycursor.execute(sql, val)
-
 for key in official_skill_regex.keys():
-    category_description = key.split("|")[2]
-    skill_description = key.split("|")[1]
+    category_description = key.split("|")[1]
+    skill_description = key.split("|")[0]
     mycursor.execute("SELECT skill_category_id FROM skill_category WHERE description = %s", (category_description,))
     skill_category_id = mycursor.fetchone()[0]
 
     sql = "INSERT IGNORE INTO skill (skill_id, description, skill_category_id) VALUES (UUID(), %s, %s)"
     val = (skill_description, skill_category_id)
     mycursor.execute(sql, val)
-
-# Skill String Dictionary
-for key, aliases in official_skill.items():
-    skill_description = key.split("|")[1]
-    mycursor.execute("SELECT skill_id FROM skill WHERE description = %s", (skill_description,))
-    skill_id = mycursor.fetchone()[0]
-
-    for alias in aliases:
-        sql = "INSERT INTO skill_string_dictionary (alias, skill_id) VALUES (%s, %s)"
-        val = (alias, skill_id)
-        mycursor.execute(sql, val)
 
 # Skill Regex Dictionary
 for key, regex_list in official_skill_regex.items():
-    skill_description = key.split("|")[1]
+    skill_description = key.split("|")[0]
     mycursor.execute("SELECT skill_id FROM skill WHERE description = %s", (skill_description,))
     skill_id = mycursor.fetchone()[0]
 

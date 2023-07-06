@@ -38,7 +38,7 @@ class DatabaseOperations:
     def fetch_skills(self):
         if self.cursor is not None:
             try:
-                query = "SELECT skill_id, skill_description, category, alias, regex FROM skill_view"
+                query = "SELECT skill_id, skill_description, category, regex FROM skill_view"
                 self.cursor.execute(query)
                 return self.cursor.fetchall()
             except Error as e:
