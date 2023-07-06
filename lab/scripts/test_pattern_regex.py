@@ -4,9 +4,9 @@ import json
 import re
 
 # Testing variables
-text = "I can develop systems using or better say develop complex systems"
-regex_string = "develop\s+(application|applications)?\s+systems"
-json_pattern = '[{"LOWER": "develop"}, {"LOWER": {"IN": ["operational", "complex"]}, "OP": "?"}, {"LOWER": "systems"}]'
+text = "I have experience in R, C, Go, Objective-C and Java and other things. I'm also a Software Engineer."
+regex_string = "(objectivec|objective.c|objective-c)"
+json_pattern = '[{"LOWER": "objective"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "c"}]'
 
 # Load a language model
 nlp = spacy.load("en_core_web_lg")
