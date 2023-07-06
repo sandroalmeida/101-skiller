@@ -13,12 +13,18 @@ class Extractor(Resource):
         resume_content = data.get("resume_content")
         official_skills, not_official_skills = extract_skills(resume_content)
         official_titles, not_official_titles = extract_titles(resume_content)
-        return {
-            "official_skills": list(official_skills), 
-            "not_official_skills": list(not_official_skills),
-            "official_titles": list(official_titles),
-            "not_official_titles": list(not_official_titles)
-        }
+
+        response = {}
+        if(official_skills):
+            response["official_skills"] = list(official_skills)
+        if(not_official_skills):
+            response["not_official_skills"] = list(not_official_skills)
+        if(official_titles):
+            response["official_titles"] = list(official_titles)
+        if(not_official_titles):
+            response["not_official_titles"] = list(not_official_titles)
+
+        return response
 
 api.add_resource(Extractor, "/extractor")
 
