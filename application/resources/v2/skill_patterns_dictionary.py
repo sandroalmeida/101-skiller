@@ -18,7 +18,7 @@ skill_patterns = {
         ("go", '[{"IS_TITLE": true, "LOWER": "go"}]'),
         ("golang", '[{"LOWER": "golang"}]'),
         ("go programming", '[{"LOWER": "go"}, {"LOWER": {"IN": ["programming", "language"]} }]'),
-        ("go (programming", '[{"LOWER": "go"}, {"LOWER": "("}, , {"LOWER": {"IN": ["programming", "language"]} }]'),
+        ("go (programming", '[{"LOWER": "go"}, {"LOWER": "("}, {"LOWER": {"IN": ["programming", "language"]} }]'),
     ],
     "Kotlin": [
         ("kotlin", '[{"LOWER": "kotlin"}]'),
@@ -27,12 +27,12 @@ skill_patterns = {
         ("rust", '[{"LOWER": "rust"}]'),
     ],
     "VB.Net": [ 
-        ("vb.net", '[{"LOWER": {"IN": "vb.net", "vbnet"} }]'),
+        ("vb.net", '[{"LOWER": {"IN": ["vb.net", "vbnet"]} }]'),
         ("visual basic .net", '[{"LOWER": "visual"}, {"LOWER": "basic"}, {"LOWER": {"IN": ["net", ".net", "dotnet"]} }]'),
-        ("vb .net", '[{"LOWER": {"IN": "vb", "visual"} }, {"LOWER": {"IN": ["net", ".net", "dotnet"]} }]'),
+        ("vb .net", '[{"LOWER": {"IN": ["vb", "visual"]} }, {"LOWER": {"IN": ["net", ".net", "dotnet"]} }]'),
     ],
     "ASP.Net": [ 
-        ("asp.net", '[{"LOWER": {"IN": "asp.net", "aspnet"} }]'),
+        ("asp.net", '[{"LOWER": {"IN": ["asp.net", "aspnet"]} }]'),
         ("asp .net", '[{"LOWER": "asp"}, {"LOWER": {"IN": ["net", ".net", "dotnet"]} }]'),
     ],
     "Bash": [
@@ -40,7 +40,7 @@ skill_patterns = {
     ],
     "Visual Basic 6": [
         ("visual basic 6", '[{"LOWER": "visual"}, {"LOWER": "basic"}, {"LOWER": "6"}]'),
-        ("vb6", '[{"LOWER": "vb6"}]'),
+        ("vb6", '[{"LOWER": {"IN": ["vb6", "vb.6"]} }]'),
         ("vb 6", '[{"LOWER": "vb"}, {"LOWER": "6"}]'),
     ],
     "C": [
@@ -52,7 +52,7 @@ skill_patterns = {
         ("c + +", '[{"LOWER": "c"}, {"LOWER": "+"}, {"LOWER": "+"}]'),
     ],
     "CSS": [
-        ("css", '[{"LOWER": {"IN": ["css", "css3]} }]'),
+        ("css", '[{"LOWER": {"IN": ["css", "css3"]} }]'),
     ],
     "GraphQL": [
         ("graphql", '[{"LOWER": "graphql"}]'),
@@ -251,6 +251,7 @@ skill_patterns = {
     ],
     "PostgreSQL": [
         ("postgresql", '[{"LOWER": "postgresql"}]'),
+        ("postgres", '[{"LOWER": "postgres"}]'),
     ],
     "Redis": [
         ("redis", '[{"LOWER": "redis"}]'),
@@ -338,8 +339,7 @@ skill_patterns = {
         ("memsql", '[{"LOWER": "memsql"}]'),
     ],
     "Android Studio": [
-        ("android studio", '[{"LOWER": "android"}, {"LOWER": "studio"}]'),
-        ("android sdk", '[{"LOWER": "android"}, {"LOWER": "sdk"}]'),
+        ("android studio", '[{"LOWER": "android"}, {"LOWER": {"IN": ["studio", "sdk"]} }]'),
     ],
     "Ansible": [
         ("ansible", '[{"LOWER": "ansible"}]'),
@@ -413,10 +413,15 @@ skill_patterns = {
     "Linux": [
         ("linux", '[{"LOWER": "linux"}]'),
         ("ubuntu", '[{"LOWER": "ubuntu"}]'),
-        ("red hat", '[{"LOWER": "red"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "hat"}]'),
+        ("red hat", '[{"LOWER": "red"}, {"LOWER": "hat"}]'),
         ("redhat", '[{"LOWER": "redhat"}]'),
         ("centos", '[{"LOWER": "centos"}]'),
         ("debian", '[{"LOWER": "debian"}]'),
+        ("fedora", '[{"LOWER": "fedora"}]'),
+        ("suse", '[{"LOWER": "suse"}]'),
+        ("gentoo", '[{"LOWER": "gentoo"}]'),
+        ("arch linux", '[{"LOWER": "arch"}, {"LOWER": "linux"}]'),
+        ("slackware", '[{"LOWER": "slackware"}]'),
     ],
     "Maven": [
         ("maven", '[{"LOWER": "maven"}, {"LOWER": "mvn"}]'),
@@ -436,7 +441,7 @@ skill_patterns = {
         ("power point", '[{"LOWER": "power"}, {"LOWER": "point"}]'),
     ],
     "Microsoft Word": [
-        ("microsoft word", '[{"LOWER": "microsoft"}, {"LOWER": "word"}]'),
+        ("microsoft word", '[{"LOWER": {"IN": ["microsoft", "ms"]} }, {"LOWER": "word"}]'),
     ],
     "Microsoft Project": [
         ("ms project", '[{"LOWER": {"IN": ["microsoft", "ms"]} }, {"LOWER": "project"}]'),
@@ -475,6 +480,7 @@ skill_patterns = {
     ],
     "Tortoise SVN": [
         ("tortoise", '[{"LOWER": "tortoise"}]'),
+        ("tortoisesvn", '[{"LOWER": "tortoisesvn"}]'),
     ],
     "Unix": [
         ("unix", '[{"LOWER": "unix"}]'),
@@ -507,7 +513,7 @@ skill_patterns = {
         ("vscode", '[{"LOWER": "vscode"}]'),
         ("vs code", '[{"LOWER": "vs"}, {"LOWER": "code"}]'),
     ],
-    "Agile Methodologies": [
+    "Agile Methodology": [
         ("agile", '[{"LOWER": "agile"}]'),
     ],
     "Algorithms Programming": [
@@ -584,7 +590,7 @@ skill_patterns = {
         ("data visualization", '[{"LOWER": "data"}, {"LOWER": "visualization"}]'),
     ],
     "Database Administration": [
-        ("database administration", '[{"LOWER": "database"}, {"LOWER": "administration"}]'),
+        ("database administration", '[{"LOWER": {"IN": ["database", "db"]} }, {"LOWER": "administration"}]'),
     ],
     "Database Design": [
         ("database design", '[{"LOWER": "database"}, {"LOWER": "design"}]'),
@@ -618,6 +624,7 @@ skill_patterns = {
     ],
     "Extract Transform Load (ETL)": [
         ("etl", '[{"LOWER": "etl"}]'),
+        ("extract transform load", '[{"LOWER": "extract"}, {"LOWER": "transform"}, {"LOWER": "load"}]'),
     ],
     "FrontEnd Development": [
         ("frontend", '[{"LOWER": "frontend"}]'),
@@ -658,14 +665,14 @@ skill_patterns = {
     "Microservices": [
         ("microservices", '[{"LOWER": {"IN": ["microservices", "microservice"]} }]'),
     ],
-       "Mobile Development": [
-        ("mobile application development", '[{"LOWER": "mobile"}, {"LOWER": {"IN": ["application", "applications"]}, "OP": "?"}, {"LOWER": "development"}]'),
+    "Mobile Development": [
+        ("mobile application development", '[{"LOWER": "mobile"}, {"LOWER": {"IN": ["app", "application", "applications"]}, "OP": "?"}, {"LOWER": "development"}]'),
     ],
     "Multithreading": [
         ("multithreading", '[{"LOWER": "multithreading"}]'),
         ("multi-threading", '[{"LOWER": "multi"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "threading"}]'),
     ],
-     "Network Administration": [
+    "Network Administration": [
         ("networking administration", '[{"LOWER": "networking"}, {"LOWER": "administration"}]'),
     ],
     "NoSQL Databases": [
@@ -694,7 +701,7 @@ skill_patterns = {
         ("project planning", '[{"LOWER": "project"}, {"LOWER": "planning"}]'),
     ],
     "Relational Databases": [
-        ("relational databases", '[{"LOWER": "relational"}, {"LOWER": "databases"}]'),
+        ("relational databases", '[{"LOWER": "relational"}, {"LOWER": {"IN": ["databases", "database"]} }]'),
     ],
     "REST API WebServices": [
         ("restful", '[{"LOWER": {"IN": ["restful", "rest"]} }]'),
@@ -703,9 +710,6 @@ skill_patterns = {
     "Requirements Analysis": [
         ("requirements analysis", '[{"LOWER": {"IN": ["requirements", "requirement"]} }, {"LOWER": "analysis"}]'),
         ("business requirements", '[{"LOWER": "business"}, {"LOWER": {"IN": ["requirements", "requirement"]} }]'),
-    ],
-     "Requirements Gathering": [
-        ("requirements gathering", '[{"LOWER": {"IN": ["requirements", "requirement"]} }, {"LOWER": "gathering"}]'),
     ],
     "Robotics": [
         ("robotics", '[{"LOWER": {"IN": ["robotics", "robotic"]} }]'),
@@ -773,7 +777,7 @@ skill_patterns = {
     "Technical Writing": [
         ("technical writing", '[{"LOWER": "technical"}, {"LOWER": "writing"}]'),
     ],
-     "Web Development": [
+    "Web Development": [
         ("web application development", '[{"LOWER": "web"}, {"LOWER": "application", "OP": "?"}, {"LOWER": {"IN": ["development", "design"]} }]'),
     ],
     "Web Services": [
@@ -784,7 +788,7 @@ skill_patterns = {
         ("ux design", '[{"LOWER": {"IN": ["ux", "ui"]} }, {"LOWER": "design"}]'),
         ("ui/ux", '[{"LOWER": {"IN": ["ux", "ui"]} }, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": {"IN": ["ux", "ui"]} }]'),
     ],
-     "Unified Modeling Language (UML)": [
+    "Unified Modeling Language (UML)": [
         ("unified modeling language", '[{"LOWER": "unified"}, {"LOWER": "modeling"}, {"LOWER": "language"}]'),
         ("uml", '[{"LOWER": "uml"}]'),
     ],
@@ -897,8 +901,8 @@ skill_patterns = {
         ("embedded systems", '[{"LOWER": "embedded"}, {"LOWER": {"IN": ["systems", "system", "software"]} }]'),
     ],
     "Application Programming Interfaces (API)":[
-        ("application programming interfaces", '[{"LOWER": "application"}, {"LOWER": "programming"}, {"LOWER": "interfaces"}]'),
-        ("api", '[{"LOWER": "api"}]'),
+        ("application programming interfaces", '[{"LOWER": "application"}, {"LOWER": "programming"}, {"LOWER": {"IN": ["interfaces", "interface"]} }]'),
+        ("api", '[{"LOWER": {"IN": ["api", "apis"]} }]'),
     ],
     "Recruiting":[
         ("recruiting", '[{"LOWER": "recruiting"}]'),
@@ -919,7 +923,7 @@ skill_patterns = {
         ("test driven development", '[{"LOWER": "test"}, {"LOWER": "driven"}, {"LOWER": "development"}]'),
         ("tdd", '[{"LOWER": "tdd"}]'),
     ],
-     "Marketing":[
+    "Marketing":[
         ("marketing", '[{"LOWER": "marketing"}]'),
     ],
     "Data Warehousing":[
@@ -942,7 +946,7 @@ skill_patterns = {
         ("internet protocol", '[{"LOWER": "internet"}, {"LOWER": "protocol"}]'),
         ("tcp/ip", '[{"LOWER": "tcp"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "ip"}]'),
     ],
-    "Startup Environment":[
+    "Startup Environment Enthusiast":[
         ("startup", '[{"LOWER": "startup"}]'),
         ("startups", '[{"LOWER": "startups"}]'),
         ("start-ups", '[{"LOWER": "start"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "ups"}]'),
@@ -986,8 +990,7 @@ skill_patterns = {
         ("operations management", '[{"LOWER": "operations"}, {"LOWER": "management"}]'),
     ],
     ".NET Core": [
-        ("dotnet core", '[{"LOWER": "dotnet"}, {"LOWER": "core"}]'),
-        (".net core", '[{"LOWER": ".net"}, {"LOWER": "core"}]'),
+        ("dotnet core", '[{"LOWER": {"IN": ["dotnet", ".net", "net"]} }, {"LOWER": "core"}]'),
         ("dot net core", '[{"LOWER": "dot"}, {"LOWER": "net"}, {"LOWER": "core"}]'),
     ],
     "Sales Management": [
@@ -1079,14 +1082,14 @@ skill_patterns = {
     ],
     "Amazon Relational Database Service (Amazon RDS)": [
         ("amazon rds", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "rds"}]'),
-        ("relational database service", '[{"LOWER": "relational"}, {"LOWER": "database"}, {"LOWER": "service"}]'),
+        ("amazon relational database service", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "relational"}, {"LOWER": "database"}, {"LOWER": "service"}]'),
     ],
     "Amazon DynamoDB": [
         ("dynamodb", '[{"LOWER": "dynamodb"}]'),
         ("dynamo db", '[{"LOWER": "dynamo"}, {"LOWER": {"IN": ["db", "database"]} }]'),
     ],
     "Amazon ElastiCache": [
-        ("elasticache", '[{"LOWER": "elasticache"}]'),
+        ("elasticache", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "elasticache"}]'),
     ],
     "Amazon Neptune": [
         ("amazon neptune", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "neptune"}]'),
@@ -1095,7 +1098,7 @@ skill_patterns = {
         ("redshift", '[{"LOWER": "redshift"}]'),
     ],
     "AWS Database Migration Service (Amazon DMS)": [
-        ("database migration service", '[{"LOWER": "database"}, {"LOWER": "migration"}, {"LOWER": "service"}]'),
+        ("database migration service", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "database"}, {"LOWER": "migration"}, {"LOWER": "service"}]'),
         ("aws dms", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "dms"}]'),
     ],
     "AWS DocumentDB": [
@@ -1119,7 +1122,7 @@ skill_patterns = {
         ("aws direct connect", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "direct"}, {"LOWER": "connect"}]'),
     ],
     "AWS App Mesh": [
-        ("app mesh", '[{"LOWER": "app"}, {"LOWER": "mesh"}]'),
+        ("app mesh", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "app"}, {"LOWER": "mesh"}]'),
     ],
     "Amazon CloudFront": [
         ("cloudfront", '[{"LOWER": "cloudfront"}]'),
@@ -1200,7 +1203,8 @@ skill_patterns = {
         ("managed streaming for apache kafka", '[{"LOWER": "managed"}, {"LOWER": "streaming"}, {"LOWER": "for"}, {"LOWER": "apache"}, {"LOWER": "kafka"}]'),
     ],
     "Amazon SageMaker": [
-        ("sagemaker", '[{"LOWER": "sagemaker"}]'),
+        ("sagemaker", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "sagemaker"}]'),
+        ("sage maker", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "sage"}, {"LOWER": "maker"}]'),
     ],
     "Amazon Comprehend": [
         ("amazon comprehend", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "comprehend"}]'),
@@ -1247,7 +1251,7 @@ skill_patterns = {
         ("amazon appflow", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "appflow"}]'),
     ],
     "AWS Step Functions": [
-        ("aws step functions", '[,{"LOWER": {"IN": ["aws", "amazon"]} } {"LOWER": "step"}, {"LOWER": "functions"}]'),
+        ("aws step functions", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "step"}, {"LOWER": "functions"}]'),
     ],
     "AWS Simple Workflow Service (Amazon SWF)": [
         ("aws swf", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "swf"}]'),
@@ -1281,7 +1285,7 @@ skill_patterns = {
         ("aws well-architected tool", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "well"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "architected"}, {"LOWER": "tool"}]'),
     ],
     "AWS Control Tower":[
-        ("aws control tower", '[{{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "control"}, {"LOWER": "tower"}]'),
+        ("aws control tower", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "control"}, {"LOWER": "tower"}]'),
     ],
     "AWS IoT Core": [
         ("aws iot core", '[{"LOWER": {"IN": ["aws", "amazon"]} }, {"LOWER": "iot"}, {"LOWER": "core"}]'),
@@ -1345,7 +1349,7 @@ skill_patterns = {
         ("security operations", '[{"LOWER": "security"}, {"LOWER": "operations"}]'),
     ],
     "Security Governance and Compliance": [
-        ("security governance", '[{"LOWER": "security"}, {"LOWER": {"IN": ["governance", "compliance]} }]'),
+        ("security governance", '[{"LOWER": "security"}, {"LOWER": {"IN": ["governance", "compliance"]} }]'),
     ],
     "Mobile Security": [
         ("mobile security", '[{"LOWER": "mobile"}, {"LOWER": "security"}]'),
@@ -1357,7 +1361,7 @@ skill_patterns = {
         ("social engineering", '[{"LOWER": "social"}, {"LOWER": "engineering"}]'),
     ],
     "Cisco Technologies": [
-        ("cisco technologies", '[{"LOWER": "cisco"}, {"LOWER": {"IN": ["technology", "technologies"]} }]'),
+        ("cisco technologies", '[{"LOWER": "cisco"}, {"LOWER": {"IN": ["technology", "technologies", "systems", "system", "networks", "products"]} }]'),
     ],
     "Microsoft Exchange": [
         ("microsoft exchange", '[{"LOWER": {"IN": ["ms", "microsoft"]} }, {"LOWER": "exchange"}]'),
@@ -1509,12 +1513,12 @@ skill_patterns = {
     "Drupal": [
         ("drupal", '[{"LOWER": "drupal"}]'),
     ],
-    "Finance Understanding": [
+    "Finance Fundamentals": [
         ("finance", '[{"LOWER": "finance"}]'),
     ],
     "Open-source software (OSS)": [
         ("open-source", '[{"LOWER": "open"}, {"IS_PUNCT": true, "OP": "?"}, {"LOWER": "source"}]'),
-        ("opensource", '[{"LOWER": "opensource"}]'),
+        ("opensource", '[{"LOWER": {"IN": ["opensource", "oss"]} }]'),
     ],
     "ASP Classic": [
         ("asp", '[{"LOWER": "asp"}, {"LOWER": {"NOT_IN": ["net", ".net", "dotnet", "dot"]} }]'),
@@ -1619,7 +1623,7 @@ skill_patterns = {
         ("system deployment", '[{"LOWER": "system"}, {"LOWER": "deployment"}]'),
     ],
     "Microsoft Outlook": [
-        ("microsoft outlook", '[{"LOWER": "microsoft"}, {"LOWER": "outlook"}]'),
+        ("microsoft outlook", '[{"LOWER": {"IN": ["ms", "microsoft"]} }, {"LOWER": "outlook"}]'),
     ],
     "System Design": [
         ("system design", '[{"LOWER": "system"}, {"LOWER": "design"}]'),
@@ -1679,7 +1683,7 @@ skill_patterns = {
         ("jest", '[{"LOWER": "jest"}]'),
     ],
     "Microsoft Visual C++": [
-        ("microsoft visual c++", '[{"LOWER": "microsoft"}, {"LOWER": "visual"}, {"LOWER": "c++"}]'),
+        ("microsoft visual c++", '[{"LOWER": "visual"}, {"LOWER": "c++"}]'),
     ],
     "Postman API": [
         ("postman", '[{"LOWER": "postman"}]'),
